@@ -1,4 +1,8 @@
 # ratpsy
+INFO: This project is for analysis of behavioral responses of rats to a light discrimination task.
+
+TASK: @AhmedRamadanUant describe the task...
+
 
 Definitions of premature responding:
 
