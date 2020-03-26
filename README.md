@@ -2,7 +2,7 @@
 INFO: This project is for analysis of behavioral responses of rats to a light discrimination task.
 
 TASK: @AhmedRamadanUant describe the task...
-      Brief description of the Signal Descrimination Task:
+      Description of the Signal Descrimination Task:
 
       In a 3 poke setup, a subject is required to initiate a trial by inserting his nose in the center poke (initiating) and remain there for 1000 ms
       (fixation period). Successfully holding its nose for the required time triggers the next state where lights are displayed from a right and left LEDs
