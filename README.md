@@ -17,34 +17,31 @@ TASK: @AhmedRamadanUant describe the task...
       The task allows evalutation of multiple behavioral parameters such as accuracy, reaction time, movement time, and premature responding. Analysis 
       of these parameters under different conditions can give insight into the different aspects of complex conditioned behavior.
 
-Definitions of premature responding:
 
+Definitions and indices of different kinds of premature responding:
 
 1- Anticipatory responses:
 
-   when the rat breaks the fixation/hold period , designated by the code number: 7 in the raw data files.
+   when the rat breaks the fixation/hold period (which is designated by the code number: 7 ; aborted fixation in the raw data files).
 
+   The index is = the proportion of the number of aborted fixations to the number of successful fixations (display-stimulus, code No:4)
 
-   The index is = number of aborted fixations to the number of successful fixations (display-stimulus)
-
-                = number of 7s                to number of 4s
-
+                = number of 7s to number of 4s
 
 
 2- Premature responding:
 
-   A- When the rats try to initiate a trial during ITI:
+   A- When the rats try to initiate a trial during ITI (code No:12):
 
+   The index is = number of center pokes happening during the interval between start of ITI and start of 'wait_for_init': 1, or 'current_trial': 2
 
-   The index is = number of center pokes during ITI
-
-                = number of 15s          during 12s
+                = number of 15s happening in the interval between 1 minus 12 + number of 15s happening in the interval between 2  minus 12
 
 
 
    B- When the rat can not wait until the penality time elapses:
 
 
-   The index is = number of center pokes during time-out
+   The index is = number of center pokes in the interval between start of 'time_out': 9 and 'wait_for_init': 1
 
-                = number of 15s          during 9s
+                = number of 15s happening in the interval between 1 minus 9 
