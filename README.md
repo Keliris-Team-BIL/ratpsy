@@ -11,8 +11,11 @@ TASK: @AhmedRamadanUant describe the task...
 
       The rat is required to decide which side is brighter, and report his decision by withdrawing from the center poke and move sidewards to make a side
       poke where light was brighter. A correct decision by the water restricted rat is rewarded with a drop of water. An incorrect choice is punished with 
-      a 5 seconds timeout. After either reward delivery or timeout the rat has to wait for a 3 second intertrial interval before being able to start a 
+      a 5 seconds timeout. After either reward delivery or timeout the rat has to wait for a 3 second intertrial interval before being able to initiate a 
       new trial.
+
+      The task allows evalutation of multiple behavioral parameters such as accuracy, reaction time, movement time, and premature responding. Analysis 
+      of these parameters under different conditions can give insight into the different aspects of complex conditioned behavior.
 
 Definitions of premature responding:
 
