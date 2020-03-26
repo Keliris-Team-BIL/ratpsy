@@ -114,7 +114,7 @@ dat.pre3.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-03-10-1811
 dat.pre4.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-03-11-191942.txt');
 
 
-%% Rat_18 got sacrificed;
+%% Rat_18 got sacrificed long before the surgery;
 
 
 %% Rat_19
@@ -126,7 +126,7 @@ dat.pre4.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-10-1811
 dat.pre5.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-11-191942.txt');
 
 
-%% Rat_20 got sacrificed;
+%% Rat_20 got sacrificed due to post surgery complications, so we can still use his prelesion data;
 
 dat.pre1.(dat.ratIDs{12})=cat(2,dataPath,datafolders{12},'/3920LR-2020-03-04-170101.txt');
 dat.pre2.(dat.ratIDs{12})=cat(2,dataPath,datafolders{12},'/3920LR-2020-03-05-165539.txt');
