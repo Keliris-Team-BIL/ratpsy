@@ -1,3 +1,4 @@
+
 function data = gk_ratpsy_data_import(info,ratNum)
 % USAGE: data = gk_ratpsy_data_import(info,[ratNum])
 %
@@ -56,16 +57,16 @@ trSidePoke=gk_pyControl_subtract_events(trResponse,trAbort);
 
 %% Define the variables to enter in the data table
 trialNumber=trEnd.trialNum;
-value_rename = {'70','C1'; '73','C2'; '76','C3'; '79','C4'; '82','C5';...
-                '88','C6'; '91','C7'; '94','C8'; '97','C9'; '100','C10'};
-trialTypes = gk_pyControl_getCategories(trType,value_rename);
+value_rename = {'70','1'; '73','2'; '76','3'; '79','4'; '82','5';...
+                '88','6'; '91','7'; '94','8'; '97','9'; '100','10'};
+trialType = gk_pyControl_getCategories(trType,value_rename);
 pw_L = gk_pyControl_getCategories(trPWL);
 pw_R = gk_pyControl_getCategories(trPWR);
 
 type_rename1 = {'n_aborted_fixation','aF';'n_aborted_response','aR';...
                 'n_wrong_left','L';'n_wrong_right','R';...
                 'n_correct_left','L';'n_correct_right','R'};
-[~,responses]=gk_pyControl_getCategories(trResponse,[],type_rename1);
+[~,response]=gk_pyControl_getCategories(trResponse,[],type_rename1);
 type_rename2 = {'n_aborted_fixation','abort';'n_aborted_response','abort';...
                 'n_wrong_left','wrong';'n_wrong_right','wrong';...
                 'n_correct_left','correct';'n_correct_right','correct'};
@@ -78,7 +79,7 @@ RT_move=NaN(trialNumber(end),1); RT_move(trials2)=moveRT;
 ratNumber=repmat(ratNum,numel(trialNumber),1);
 
 %% Create that data table
-data=table(trialNumber,trialTypes,pw_L,pw_R,responses,outcome,RT_stim,RT_move,ratNumber);
+data=table(trialNumber,trialType,pw_L,pw_R,response,outcome,RT_stim,RT_move,ratNumber);
 
 %data=table(trialType,stimType,response,correct,stimOnTime,reactionTime,trialStart,trialEnd,preMature,ratNumber);
 

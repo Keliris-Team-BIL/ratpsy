@@ -15,7 +15,7 @@ end
 save(fullfile(d.dataPath,'Analysis','data'),'data');
 
 %% LOAD ALL DATA (after 1st time)
-load data;
+load(fullfile(d.dataPath,'Analysis','data'));
 
 %% POPULATION: ANALYSIS OF REACTION TIMES AND PREMATURE RESPONSES
 
@@ -93,7 +93,7 @@ end
 % Get the data per rat and timepoint
 for rat=1:6
     N.pre{rat,1} = gk_get_psychometric(allDataPre(allDataPre.ratNumber==rat,:));
-    for pi={'post1', 'post2', 'post3', 'post4', 'post5', 'post6', 'post7'}
+    for pi={'pre3','pre4','pre5'}
         N.post{rat,str2double(pi{1}(end))} = ...
             gk_get_psychometric(dataPost.(pi{1})(dataPost.(pi{1}).ratNumber==rat,:));
     end

@@ -14,11 +14,13 @@ function N = gk_get_psychometric(data, printNumbers)
 if nargin<2
     printNumbers=false;
 end
-N.trialType=[1:7 12:-1:8];
-N.stimulus=[-6:-2 0 0 2:6]/6; % Michelson contrast = (Imax-Imin)/(Imax+Imin)
+N.trialType=categorical(1:10);
+pw_L=[70 73 76 79 82 88 91 94 97 100];
+pw_R=fliplr(pw_L);
+N.stimulus=gk_ratpsy_Michelson(pw_L,pw_R); % Michelson contrast = (Imax-Imin)/(Imax+Imin)
 
 % Get the correct trials
-data_correct=data(data.correct==1,:);
+data_correct=data(data.outcome=='correct',:);
 
 % if no correct trial return an empty matrix
 if isempty(data_correct)
@@ -38,10 +40,10 @@ end
 for tt=1:numel(N.stimulus)
     %cond{tt}=data(data.trialType==N.trialType(tt),:);
     
-    N.correct(tt)=numel(find(data.trialType==N.trialType(tt) & data.correct));
+    N.correct(tt)=numel(find(data.trialType==N.trialType(tt) & data.outcome=='correct'));
     N.total(tt)=numel(find(data.trialType==N.trialType(tt)));
-    N.right(tt)=numel(find(data.trialType==N.trialType(tt) & data.response==2));
-    N.left(tt)=numel(find(data.trialType==N.trialType(tt) & data.response==1));
+    N.right(tt)=numel(find(data.trialType==N.trialType(tt) & data.response=='R'));
+    N.left(tt)=numel(find(data.trialType==N.trialType(tt) & data.response=='L'));
     if printNumbers
         fprintf('Stim = %.2f : %d/%d = %.2f %% \n',N.stimulus(tt),N.correct(tt),N.total(tt),100*N.correct(tt)/N.total(tt));
     end
