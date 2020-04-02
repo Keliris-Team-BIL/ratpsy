@@ -1,0 +1,204 @@
+I Experiment name  : II_phase5
+I Task name : II_phase5_Signal discrimination with 5C_experiment
+I Subject ID : 3917L
+I Start date : 2020/01/28 16:55:47
+
+S {'the_wait': 13, 'aborted_fixation': 7, 'right_reward': 11, 'wait_for_init': 1, 'display_stimulus': 4, 'evaluate_rat_type': 5, 'ITI': 12, 'current_trial': 2, 'time_out': 9, 'reward_available': 6, 'init_poke_hold': 3, 'aborted_response': 8, 'left_reward': 10, 'end_session': 14}
+
+E {'center_poke': 15, 'center_poke_out': 16, 'hold_timer': 19, 'left_poke': 18, 'right_poke': 17, 'stimulus_onset': 20, 'session_timer': 21}
+
+
+D 0 1
+P 0 correct:L
+P 1 pW_L:73
+P 1 pW_R:97
+P 2 trialType:1
+D 363580 15
+D 363581 3
+P 363582 n_trials:1
+D 363803 16
+D 363804 7
+P 363804 n_aborted_fixation:1
+D 364804 2
+P 364804 correct:L
+P 364805 pW_L:73
+P 364806 pW_R:97
+D 367025 15
+D 367025 3
+P 367026 n_trials: 2
+D 367695 16
+D 367696 7
+P 367697 n_aborted_fixation:2
+D 368696 2
+P 368696 correct:L
+P 368697 pW_L:73
+P 368698 pW_R:97
+D 432697 17
+D 433658 17
+D 437910 15
+D 437910 3
+P 437911 n_trials: 3
+D 438281 16
+D 438281 7
+P 438282 n_aborted_fixation:3
+D 439282 2
+P 439282 correct:L
+P 439283 pW_L:73
+P 439284 pW_R:97
+D 441497 17
+D 446535 17
+D 485717 15
+D 485717 3
+P 485718 n_trials: 4
+D 485738 16
+D 485739 7
+P 485740 n_aborted_fixation:4
+D 486740 2
+P 486740 correct:L
+P 486741 pW_L:73
+P 486742 pW_R:97
+D 490057 15
+D 490058 3
+P 490058 n_trials: 5
+D 490779 16
+D 490779 7
+P 490780 n_aborted_fixation:5
+D 491780 2
+P 491780 correct:L
+P 491781 pW_L:73
+P 491782 pW_R:97
+D 496166 15
+D 496167 3
+P 496168 n_trials: 6
+D 496216 16
+D 496217 7
+P 496218 n_aborted_fixation:6
+D 496316 15
+D 496811 16
+D 497217 2
+P 497217 correct:L
+P 497218 pW_L:73
+P 497219 pW_R:97
+D 497950 15
+D 497951 3
+P 497951 n_trials: 7
+D 498951 19
+P 498951 hold_time:1000
+P 498952 n_successful_fixation: 1
+D 498952 4
+D 498954 5
+D 498986 16
+D 498987 6
+D 500076 17
+P 500078 n_wrong_right:1
+D 500078 9
+D 501401 17
+D 505078 12
+D 508078 1
+P 508078 correct:R
+P 508079 pW_L:94
+P 508080 pW_R:76
+P 508080 trialType:7
+D 559486 15
+D 559486 3
+P 559487 n_trials:8
+D 560236 16
+D 560237 7
+P 560238 n_aborted_fixation:7
+D 561237 2
+P 561237 correct:R
+P 561238 pW_L:94
+P 561239 pW_R:76
+D 921239 7
+P 921239 n_aborted_fixation:8
+D 922239 2
+P 922239 correct:R
+P 922240 pW_L:94
+P 922241 pW_R:76
+D 1084978 18
+D 1204590 15
+D 1204591 3
+P 1204591 n_trials: 9
+D 1204848 16
+D 1204849 7
+P 1204849 n_aborted_fixation:9
+D 1205849 2
+P 1205849 correct:R
+P 1205850 pW_L:94
+P 1205851 pW_R:76
+D 1210088 15
+D 1210088 3
+P 1210089 n_trials: 10
+D 1210963 16
+D 1210964 7
+P 1210965 n_aborted_fixation:10
+D 1211449 18
+D 1211964 2
+P 1211964 correct:R
+P 1211965 pW_L:94
+P 1211966 pW_R:76
+D 1213157 18
+D 1215493 18
+D 1216356 18
+D 1217353 18
+D 1218857 18
+D 1220872 18
+D 1571966 7
+P 1571971 n_aborted_fixation:11
+D 1572966 2
+P 1572966 correct:R
+P 1572967 pW_L:94
+P 1572968 pW_R:76
+D 1932968 7
+P 1932968 n_aborted_fixation:12
+D 1933968 2
+P 1933968 correct:R
+P 1933969 pW_L:94
+P 1933970 pW_R:76
+D 2293970 7
+P 2293970 n_aborted_fixation:13
+D 2294970 2
+P 2294970 correct:R
+P 2294971 pW_L:94
+P 2294972 pW_R:76
+D 2424057 15
+D 2424058 3
+P 2424059 n_trials: 11
+D 2424117 16
+D 2424118 7
+P 2424119 n_aborted_fixation:14
+D 2424129 15
+D 2425118 2
+P 2425118 correct:R
+P 2425119 pW_L:94
+P 2425120 pW_R:76
+D 2425414 16
+D 2425692 15
+D 2425692 3
+P 2425693 n_trials: 12
+D 2425780 16
+D 2425781 7
+P 2425782 n_aborted_fixation:15
+D 2425797 15
+D 2426781 2
+P 2426781 correct:R
+P 2426782 pW_L:94
+P 2426783 pW_R:76
+D 2426928 16
+D 2427874 15
+D 2427874 3
+P 2427875 n_trials: 13
+D 2428234 16
+D 2428235 7
+P 2428236 n_aborted_fixation:16
+D 2429235 2
+P 2429235 correct:R
+P 2429236 pW_L:94
+P 2429237 pW_R:76
+V 2521230 hold_duration 750
+D 2789237 7
+P 2789237 n_aborted_fixation:17
+D 2790237 2
+P 2790237 correct:R
+P 2790238 pW_L:94
+P 2790239 pW_R:76

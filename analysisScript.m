@@ -9,7 +9,7 @@ end
 if ~isfolder(fullfile(d.dataPath,'Analysis','Figures'));
     mkdir(fullfile(d.dataPath,'Analysis','Figures'));
 end
-    
+
 
 %% GET ALL DATA (1st time)
 timepoints=fieldnames(d);
@@ -30,7 +30,7 @@ load(fullfile(d.dataPath,'Analysis','data'));
 %% POPULATION: ANALYSIS OF REACTION TIMES AND PREMATURE RESPONSES
 
 allDataPre=[];
-for pi={'pre1', 'pre2'}
+for pi={'pre1', 'pre2', 'pre3', 'pre4', 'pre5'}
     ratIDs=fieldnames(data.(pi{1}));
     for rat=[{ratIDs{:}}]
         allDataPre=cat(1,allDataPre,data.(pi{1}).(rat{1}));
@@ -38,7 +38,7 @@ for pi={'pre1', 'pre2'}
 end
 
 allDataPost=[];
-for pi={'pre4', 'pre5'}
+for pi={'post1', 'post2', 'post3'}
     ratIDs=fieldnames(data.(pi{1}));
     for rat=[{ratIDs{:}}]
         allDataPost=cat(1,allDataPost,data.(pi{1}).(rat{1}));
@@ -46,7 +46,7 @@ for pi={'pre4', 'pre5'}
 end
 
 % separate each post timepoint
-for pi={'pre3', 'pre4', 'pre5'}
+for pi={'post1', 'post2', 'post3'}
     ratIDs=fieldnames(data.(pi{1}));
     dataPost.(pi{1})=[];
     for rat=[{ratIDs{:}}]
@@ -162,8 +162,8 @@ diary OFF
 
 
 
-% % 
-% % 
+% %
+% %
 % % % prepare for psignfit
 % % %N_pre.stimulus = [-log(1+abs(N_pre.stimulus(1:6))) log(1+N_pre.stimulus(7:12))];
 % % P_pre=[N_pre.stimulus' N_pre.right' N_pre.total'];
@@ -179,29 +179,29 @@ diary OFF
 % % plotPsych(res_pre,plotOptions);
 % % hold on;
 % % %figure; plotsModelfit(res_pre)
-% % 
+% %
 % % plotOptions.dataColor=[0 1 0];
 % % plotOptions.lineColor=[0 1 0];
 % % plotOptions.CIthresh=true;
 % % plotPsych(res_post,plotOptions);
-% % 
+% %
 % % plotOptions.dataColor=[1 0 0];
 % % plotOptions.lineColor=[1 0 0];
 % % plotPsych(res_post1,plotOptions);
-% % 
-% % 
+% %
+% %
 % % % USING PALAMEDES
 % % PF=@PAL_CumulativeNormal;
 % % [paramsValues LL exitflag] = PAL_PFML_Fit(N_pre.stimulus, ...
 % %     N_pre.right,N_pre.total,[0 1 0 0],[1 1 0 0],PF)
 % % Fit = PF(paramsValues,-8:0.01:8);
 % % plot(-8:0.01:8,Fit,'b--','LineWidth',2)
-% % 
+% %
 % % B = 400;
 % % [SD paramsSim LLSim converged] =...
 % %     PAL_PFML_BootstrapParametric(N_pre.stimulus, N_pre.total, ...
 % %     paramsValues, [1 1 0 0], B, PF);
-% % 
+% %
 % % B = 1000;
 % % [Dev pDev DevSim converged] = ...
 % %     PAL_PFML_GoodnessOfFit(N_pre.stimulus, N_pre.right, N_pre.total, ...

@@ -1,0 +1,111 @@
+I Experiment name  : II_phase5
+I Task name : II_phase5_Signal discrimination with 5C_experiment
+I Subject ID : 3913L
+I Start date : 2020/03/26 13:30:32
+
+S {'the_wait': 13, 'aborted_fixation': 7, 'right_reward': 11, 'wait_for_init': 1, 'display_stimulus': 4, 'evaluate_rat_type': 5, 'ITI': 12, 'current_trial': 2, 'time_out': 9, 'reward_available': 6, 'init_poke_hold': 3, 'aborted_response': 8, 'left_reward': 10, 'end_session': 14}
+
+E {'center_poke': 15, 'center_poke_out': 16, 'hold_timer': 19, 'left_poke': 18, 'right_poke': 17, 'stimulus_onset': 20, 'session_timer': 21}
+
+
+D 0 1
+P 0 correct:R
+P 1 pW_L:100
+P 2 pW_R:70
+P 2 trialType:5
+D 93292 15
+D 93292 3
+P 93293 n_trials:1
+D 93312 16
+D 93313 7
+P 93314 n_aborted_fixation:1
+D 94313 2
+P 94313 correct:R
+P 94314 pW_L:100
+P 94315 pW_R:70
+P 94315 trialType:5
+D 96010 15
+D 96010 3
+P 96011 n_trials:2
+D 96281 16
+D 96282 7
+P 96282 n_aborted_fixation:2
+D 97282 2
+P 97282 correct:R
+P 97283 pW_L:100
+P 97284 pW_R:70
+P 97284 trialType:5
+D 98526 18
+D 119396 18
+D 120489 15
+D 120489 3
+P 120490 n_trials:3
+D 120611 16
+D 120611 7
+P 120612 n_aborted_fixation:3
+D 121612 2
+P 121612 correct:R
+P 121613 pW_L:100
+P 121614 pW_R:70
+P 121614 trialType:5
+D 121828 15
+D 121829 3
+P 121830 n_trials:4
+D 122216 16
+D 122217 7
+P 122217 n_aborted_fixation:4
+D 123168 17
+D 123217 2
+P 123217 correct:R
+P 123218 pW_L:100
+P 123219 pW_R:70
+P 123219 trialType:5
+D 123827 15
+D 123827 3
+P 123828 n_trials:5
+D 124312 16
+D 124313 7
+P 124314 n_aborted_fixation:5
+D 124635 18
+D 125313 2
+P 125313 correct:R
+P 125314 pW_L:100
+P 125315 pW_R:70
+P 125315 trialType:5
+D 129689 18
+D 150384 18
+D 150547 18
+D 153224 15
+D 153225 3
+P 153225 n_trials:6
+D 153300 16
+D 153300 7
+P 153301 n_aborted_fixation:6
+D 154005 17
+D 154301 2
+P 154301 correct:R
+P 154302 pW_L:100
+P 154303 pW_R:70
+P 154303 trialType:5
+D 155139 15
+D 155140 3
+P 155141 n_trials:7
+D 155350 16
+D 155350 7
+P 155351 n_aborted_fixation:7
+D 156351 2
+P 156351 correct:R
+P 156352 pW_L:100
+P 156353 pW_R:70
+P 156353 trialType:5
+D 779578 15
+D 779578 3
+P 779579 n_trials:8
+D 779583 16
+D 779583 7
+P 779584 n_aborted_fixation:8
+D 780583 2
+P 780583 correct:R
+P 780584 pW_L:100
+P 780585 pW_R:70
+P 780585 trialType:5

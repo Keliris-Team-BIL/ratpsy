@@ -1,0 +1,41 @@
+I Experiment name  : II_phase5
+I Task name : II_phase5_Signal discrimination with 5C_experiment
+I Subject ID : 3915L
+I Start date : 2020/01/08 20:24:32
+
+S {'the_wait': 13, 'aborted_fixation': 7, 'right_reward': 11, 'wait_for_init': 1, 'display_stimulus': 4, 'evaluate_rat_type': 5, 'ITI': 12, 'current_trial': 2, 'time_out': 9, 'reward_available': 6, 'init_poke_hold': 3, 'aborted_response': 8, 'left_reward': 10, 'end_session': 14}
+
+E {'center_poke': 15, 'center_poke_out': 16, 'hold_timer': 19, 'left_poke': 18, 'right_poke': 17, 'stimulus_onset': 20, 'session_timer': 21}
+
+
+D 0 1
+P 0 correct:R
+P 1 pW_L:91
+P 2 pW_R:79
+P 2 trialType:8
+D 1100520 18
+D 1948452 18
+D 1948788 18
+D 1948858 18
+D 1951140 18
+D 1959837 18
+D 1963471 15
+D 1963472 3
+P 1963472 n_trials:1
+D 1964322 19
+P 1964322 hold_time:850
+P 1964323 n_successful_fixation: 1
+D 1964323 4
+D 1964325 5
+D 1964637 16
+D 1964637 6
+D 1965386 18
+P 1965388 n_wrong_left:1
+D 1965388 9
+D 1965593 18
+D 1970388 1
+P 1970388 correct:R
+P 1970389 pW_L:94
+P 1970390 pW_R:76
+P 1970390 trialType:7
+D 1979516 18

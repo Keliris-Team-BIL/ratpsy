@@ -1,0 +1,101 @@
+I Experiment name  : II_phase5
+I Task name : II_phase5_Signal discrimination with 5C_experiment
+I Subject ID : 3917L
+I Start date : 2020/02/04 17:21:54
+
+S {'the_wait': 13, 'aborted_fixation': 7, 'right_reward': 11, 'wait_for_init': 1, 'display_stimulus': 4, 'evaluate_rat_type': 5, 'ITI': 12, 'current_trial': 2, 'time_out': 9, 'reward_available': 6, 'init_poke_hold': 3, 'aborted_response': 8, 'left_reward': 10, 'end_session': 14}
+
+E {'center_poke': 15, 'center_poke_out': 16, 'hold_timer': 19, 'left_poke': 18, 'right_poke': 17, 'stimulus_onset': 20, 'session_timer': 21}
+
+
+D 0 1
+P 0 correct:L
+P 1 pW_L:73
+P 1 pW_R:97
+P 2 trialType:1
+D 903325 18
+D 903396 18
+D 904265 15
+D 904265 3
+P 904266 n_trials:1
+D 904292 16
+D 904293 7
+P 904294 n_aborted_fixation:1
+D 905293 2
+P 905293 correct:L
+P 905294 pW_L:73
+P 905295 pW_R:97
+D 911558 15
+D 911558 3
+P 911559 n_trials:2
+D 911727 16
+D 911728 7
+P 911729 n_aborted_fixation:2
+D 911773 15
+D 912022 16
+D 912045 15
+D 912124 16
+D 912728 2
+P 912728 correct:L
+P 912729 pW_L:73
+P 912730 pW_R:97
+D 941480 15
+D 941480 3
+P 941481 n_trials:3
+D 941555 16
+D 941555 7
+P 941556 n_aborted_fixation:3
+D 941581 15
+D 941691 16
+D 942556 2
+P 942556 correct:L
+P 942557 pW_L:73
+P 942558 pW_R:97
+D 956668 15
+D 956669 3
+P 956669 n_trials:4
+D 956714 16
+D 956714 7
+P 956715 n_aborted_fixation:4
+D 956774 15
+D 956842 16
+D 957715 2
+P 957715 correct:L
+P 957716 pW_L:73
+P 957717 pW_R:97
+D 959919 15
+D 959920 3
+P 959920 n_trials:5
+D 960689 16
+D 960690 7
+P 960691 n_aborted_fixation:5
+D 960727 15
+D 960780 16
+D 961690 2
+P 961690 correct:L
+P 961691 pW_L:73
+P 961692 pW_R:97
+D 1321692 7
+P 1321693 n_aborted_fixation:6
+D 1322692 2
+P 1322692 correct:L
+P 1322693 pW_L:73
+P 1322694 pW_R:97
+D 1682694 7
+P 1682694 n_aborted_fixation:7
+D 1683694 2
+P 1683694 correct:L
+P 1683695 pW_L:73
+P 1683696 pW_R:97
+D 2043696 7
+P 2043696 n_aborted_fixation:8
+D 2044696 2
+P 2044696 correct:L
+P 2044697 pW_L:73
+P 2044698 pW_R:97
+D 2404698 7
+P 2404699 n_aborted_fixation:9
+D 2405698 2
+P 2405698 correct:L
+P 2405699 pW_L:73
+P 2405700 pW_R:97
