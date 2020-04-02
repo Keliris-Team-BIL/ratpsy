@@ -1,5 +1,15 @@
 % be in code directory
 d=Behavior_Datapaths('/Users/gkeliris/Documents/DATA/Ahmed/preLesionRawData',0);
+if ~isfolder(fullfile(d.dataPath,'Analysis'))
+    mkdir(fullfile(d.dataPath,'Analysis'));
+end
+if ~isfolder(fullfile(d.dataPath,'Analysis','logfiles'))
+    mkdir(fullfile(d.dataPath,'Analysis','logfiles'));
+end
+if ~isfolder(fullfile(d.dataPath,'Analysis','Figures'));
+    mkdir(fullfile(d.dataPath,'Analysis','Figures'));
+end
+    
 
 %% GET ALL DATA (1st time)
 timepoints=fieldnames(d);
@@ -64,34 +74,40 @@ gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='wrong',:), allDataPost(all
 %gk_plot_prematureResp(allDataPre(allDataPre.response==2,:), allDataPost(allDataPost.response==2,:), {'pre','post'});
 
 %% ANALYSIS RAT BY RAT
-for rat=1:6
-    gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.correct==1,:), allDataPost(allDataPost.ratNumber==rat & allDataPost.correct==1,:), {'pre','post'});
-end
-for rat=1:6
-    gk_plot_prematureResp(allDataPre(allDataPre.ratNumber==rat,:), allDataPost(allDataPost.ratNumber==rat,:), {'pre','post'});
+for rat=[7,8,10,11,12,13,14,15,16,17,19,20]
+    gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.outcome=='correct',:),...
+        allDataPost(allDataPost.ratNumber==rat & allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
+    title(['RT stim, outcome:correct, Rat number: ', num2str(rat)]);
 end
 
+% for rat=1:6
+%     gk_plot_prematureResp(allDataPre(allDataPre.ratNumber==rat,:), allDataPost(allDataPost.ratNumber==rat,:), {'pre','post'},'RT_stim');
+% end
+
 % plot only the trials to the left
-for rat=1:6
-    gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.response==1,:),...
-        allDataPost(allDataPost.ratNumber==rat & allDataPost.response==1,:), {'pre','post'});
+for rat=[7,8,10,11,12,13,14,15,16,17,19,20]
+    gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.response=='L',:),...
+        allDataPost(allDataPost.ratNumber==rat & allDataPost.response=='L',:), {'pre','post'},'RT_stim');
+    title(['RT stim, response:L, Rat number: ', num2str(rat)]);
 end
 % plot only the trials to the right
-for rat=1:6
-    gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.response==2,:),...
-        allDataPost(allDataPost.ratNumber==rat & allDataPost.response==2,:), {'pre','post'});
+for rat=[7,8,10,11,12,13,14,15,16,17,19,20]
+    gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.response=='R',:),...
+        allDataPost(allDataPost.ratNumber==rat & allDataPost.response=='R',:), {'pre','post'},'RT_stim');
+    title(['RT stim, response:R, Rat number: ', num2str(rat)]);
 end
 
 % compare left-right
-for rat=1:6
-    gk_plot_reactionTimes(allDataPre(allDataPost.ratNumber==rat & allDataPost.response==1,:),...
-        allDataPost(allDataPost.ratNumber==rat & allDataPost.response==2,:), {'left','right'});
+for rat=[7,8,10,11,12,13,14,15,16,17,19,20]
+    gk_plot_reactionTimes(allDataPre(allDataPost.ratNumber==rat & allDataPost.response=='L',:),...
+        allDataPost(allDataPost.ratNumber==rat & allDataPost.response=='R',:), {'left','right'},'RT_stim');
+    title(['RT stim, L vs R, Rat number: ', num2str(rat)]);
 end
 
 %% PSYCHOMETRICS
 
 % Get the data per rat and timepoint
-for rat=1:6
+for rat=[7,8,10,11,12,13,14,15,16,17,19,20]
     N.pre{rat,1} = gk_get_psychometric(allDataPre(allDataPre.ratNumber==rat,:));
     for pi={'pre3','pre4','pre5'}
         N.post{rat,str2double(pi{1}(end))} = ...
@@ -99,34 +115,37 @@ for rat=1:6
     end
 end
 
-save('data','N','-append');
+save(fullfile(d.dataPath,'Analysis','data'),'N','-append');
 
 % Fit the psychometric curves per rat and create figures
-diary(fullfile(pwd,'logfiles',['PF_',datestr(now,30),'.txt']))
+diary(fullfile(d.dataPath,'Analysis','logfiles',['PF_',datestr(now,30),'.txt']))
 diary ON
-figure;
-for rat=1:6
-   subplot(2,3,rat); hold on; 
+%figure;
+for rat=[7,8,10,11,12,13,14,15,16,17,19,20]
+   %subplot(2,3,rat); hold on;
+   figure(100+rat);
    fprintf('\nFitting rat %d, pre\n_______\n',rat);
    [PF.pre.thresh(rat) PF.pre.slope(rat) PF.pre.SEthresh(rat)...
        PF.pre.SEslope(rat) PF.pre.Dev(rat) PF.pre.pDev(rat)] = ...
        gk_PAL_PFML(N.pre{rat}, [1 0.2 0.2]);
-%    for pst=1:7
-%        fprintf('\nFitting rat %d, post %d\n_______\n',rat,pst);
-%        if ~isempty(N.post{rat,pst})
-%            [PF.post.thresh(rat,pst) PF.post.slope(rat,pst) PF.post.SEthresh(rat,pst)...
-%                PF.post.SEslope(rat,pst) PF.post.Dev(rat,pst) PF.post.pDev(rat,pst)] = ...
-%                gk_PAL_PFML(N.post{rat,pst},(1-[1/pst 1/pst 1/pst]).^1.5);
-%        end
-%    end
+   for pst=3:5
+       fprintf('\nFitting rat %d, post %d\n_______\n',rat,pst);
+       if ~isempty(N.post{rat,pst})
+           [PF.post.thresh(rat,pst) PF.post.slope(rat,pst) PF.post.SEthresh(rat,pst)...
+               PF.post.SEslope(rat,pst) PF.post.Dev(rat,pst) PF.post.pDev(rat,pst)] = ...
+               gk_PAL_PFML(N.post{rat,pst},(1-[1/pst 1/pst 1/pst]).^1.5);
+       end
+   end
+   title(['Rat number: ', num2str(rat)]);
+   saveas(gcf,fullfile(d.dataPath,'Analysis','Figures',['psychometric_rat' num2str(rat) '.png']));
 end
 diary OFF
-save('data','PF','-append')
+save(fullfile(d.dataPath,'Analysis','data'),'PF','-append')
 
-diary(fullfile(pwd,'logfiles',['STATS_',datestr(now,30),'.txt']))
+diary(fullfile(d.dataPath,'Analysis','logfiles',['STATS_',datestr(now,30),'.txt']))
 diary ON
-for rat=1:6
-    for pst=1:7
+for rat=[7,8,10,11,12,13,14,15,16,17,19,20]
+    for pst=3:5
         fprintf('\n________\nrat %d, pre vs post%d\n',rat,pst);
         if isempty(N.post{rat,pst})
             fprintf('Missing time point for this rat\n')
