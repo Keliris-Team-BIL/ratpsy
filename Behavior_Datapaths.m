@@ -92,11 +92,6 @@ dat.post2.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/3912LR-2020-03-25-1451
 dat.post3.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/3912LR-2020-03-26-144344.txt');
 
 
-
-
-
-
-
 %% Rat_13 J60
 
 dat.pre1.(dat.ratIDs{6})=cat(2,dataPath,datafolders{6},'/3913L-2020-03-04-142547.txt');
