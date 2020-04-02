@@ -28,7 +28,7 @@ for pi={'pre1', 'pre2', 'pre3', 'pre4', 'pre5'}
 end
 
 allDataPost=[];
-for pi={'post1', 'post2', 'post3'}
+for pi={'pre4', 'pre5'}
     ratIDs=fieldnames(data.(pi{1}));
     for rat=[{ratIDs{:}}]
         allDataPost=cat(1,allDataPost,data.(pi{1}).(rat{1}));
@@ -36,7 +36,7 @@ for pi={'post1', 'post2', 'post3'}
 end
 
 % separate each post timepoint
-for pi={'post1', 'post2', 'post3'}
+for pi={'pre3', 'pre4', 'pre5'}
     ratIDs=fieldnames(data.(pi{1}));
     dataPost.(pi{1})=[];
     for rat=[{ratIDs{:}}]
@@ -65,7 +65,7 @@ gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='wrong',:), allDataPost(all
 
 %% ANALYSIS RAT BY RAT
 for rat=1:6
-    gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.outcome==correct,:), allDataPost(allDataPost.ratNumber==rat & allDataPost.outcome==correct,:), {'pre','post'});
+    gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.correct==1,:), allDataPost(allDataPost.ratNumber==rat & allDataPost.correct==1,:), {'pre','post'});
 end
 for rat=1:6
     gk_plot_prematureResp(allDataPre(allDataPre.ratNumber==rat,:), allDataPost(allDataPost.ratNumber==rat,:), {'pre','post'});
