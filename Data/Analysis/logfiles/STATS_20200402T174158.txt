@@ -1,0 +1,720 @@
+
+________
+rat 7, pre vs post1
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.393674	1.272043	0.000000	0.020000	
+0.393674	1.272043	0.000000	0.020000	
+Log Likelihood: -880.057282
+Number of free parameters: 2
+AIC: 1764.114564
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.326106	1.334877	0.000000	0.020000	
+0.746003	1.066732	0.000000	0.020000	
+Log Likelihood: -867.834244
+Number of free parameters: 4
+AIC: 1743.668487
+
+
+Saturated model: 
+
+Log Likelihood: -860.429089
+Number of free parameters: 20
+AIC: 1760.858178
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 24.446077.
+degrees of freedom: 2.
+p-value: 0.000005
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 14.810309
+degrees of freedom: 16.
+p-value: 0.538573
+
+
+________
+rat 7, pre vs post2
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.341217	1.333851	0.000000	0.020000	
+0.341217	1.333851	0.000000	0.020000	
+Log Likelihood: -793.504326
+Number of free parameters: 2
+AIC: 1591.008653
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.326106	1.334877	0.000000	0.020000	
+0.474270	1.336574	0.000000	0.020000	
+Log Likelihood: -792.211325
+Number of free parameters: 4
+AIC: 1592.422649
+
+
+Saturated model: 
+
+Log Likelihood: -784.750052
+Number of free parameters: 20
+AIC: 1609.500104
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 2.586004.
+degrees of freedom: 2.
+p-value: 0.274446
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 14.922545
+degrees of freedom: 16.
+p-value: 0.530319
+
+
+________
+rat 7, pre vs post3
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.336824	1.277997	0.000000	0.020000	
+0.336824	1.277997	0.000000	0.020000	
+Log Likelihood: -902.205542
+Number of free parameters: 2
+AIC: 1808.411084
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.326106	1.334877	0.000000	0.020000	
+0.388776	1.054787	0.000000	0.020000	
+Log Likelihood: -900.370729
+Number of free parameters: 4
+AIC: 1808.741457
+
+
+Saturated model: 
+
+Log Likelihood: -889.002736
+Number of free parameters: 20
+AIC: 1818.005471
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 3.669627.
+degrees of freedom: 2.
+p-value: 0.159643
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 22.735986
+degrees of freedom: 16.
+p-value: 0.120977
+
+
+________
+rat 8, pre vs post1
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.334890	1.352414	0.000000	0.020000	
+0.334890	1.352414	0.000000	0.020000	
+Log Likelihood: -974.441118
+Number of free parameters: 2
+AIC: 1952.882237
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.398482	1.437250	0.000000	0.020000	
+-0.099865	1.217451	0.000000	0.020000	
+Log Likelihood: -946.718817
+Number of free parameters: 4
+AIC: 1901.437634
+
+
+Saturated model: 
+
+Log Likelihood: -935.692238
+Number of free parameters: 20
+AIC: 1911.384475
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 55.444603.
+degrees of freedom: 2.
+p-value: 0.000000
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 22.053159
+degrees of freedom: 16.
+p-value: 0.141483
+
+
+________
+rat 8, pre vs post2
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.376729	1.405602	0.000000	0.020000	
+0.376729	1.405602	0.000000	0.020000	
+Log Likelihood: -961.224141
+Number of free parameters: 2
+AIC: 1926.448283
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.398482	1.437250	0.000000	0.020000	
+0.254587	1.301331	0.000000	0.020000	
+Log Likelihood: -957.765458
+Number of free parameters: 4
+AIC: 1923.530917
+
+
+Saturated model: 
+
+Log Likelihood: -950.947453
+Number of free parameters: 20
+AIC: 1941.894907
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 6.917366.
+degrees of freedom: 2.
+p-value: 0.031471
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 13.636010
+degrees of freedom: 16.
+p-value: 0.625810
+
+
+________
+rat 8, pre vs post3
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.373960	1.429906	0.000000	0.020000	
+0.373960	1.429906	0.000000	0.020000	
+Log Likelihood: -948.961650
+Number of free parameters: 2
+AIC: 1901.923300
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.398482	1.437250	0.000000	0.020000	
+0.238001	1.407838	0.000000	0.020000	
+Log Likelihood: -945.814541
+Number of free parameters: 4
+AIC: 1899.629082
+
+
+Saturated model: 
+
+Log Likelihood: -934.851413
+Number of free parameters: 20
+AIC: 1909.702825
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 6.294218.
+degrees of freedom: 2.
+p-value: 0.042976
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 21.926257
+degrees of freedom: 16.
+p-value: 0.145589
+
+
+________
+rat 10, pre vs post1
+Missing time point for this rat
+
+________
+rat 10, pre vs post2
+Missing time point for this rat
+
+________
+rat 10, pre vs post3
+Missing time point for this rat
+
+________
+rat 11, pre vs post1
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.374696	1.555459	0.000000	0.020000	
+0.374696	1.555459	0.000000	0.020000	
+Log Likelihood: -807.320808
+Number of free parameters: 2
+AIC: 1618.641616
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.361370	1.604928	0.000000	0.020000	
+0.462582	1.291283	0.000000	0.020000	
+Log Likelihood: -805.480470
+Number of free parameters: 4
+AIC: 1618.960940
+
+
+Saturated model: 
+
+Log Likelihood: -794.203460
+Number of free parameters: 20
+AIC: 1628.406921
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 3.680676.
+degrees of freedom: 2.
+p-value: 0.158764
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 22.554019
+degrees of freedom: 16.
+p-value: 0.126187
+
+
+________
+rat 11, pre vs post2
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.355161	1.574434	0.000000	0.020000	
+0.355161	1.574434	0.000000	0.020000	
+Log Likelihood: -832.800868
+Number of free parameters: 2
+AIC: 1669.601737
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.361371	1.604928	0.000000	0.020000	
+0.320236	1.431346	0.000000	0.020000	
+Log Likelihood: -831.908246
+Number of free parameters: 4
+AIC: 1671.816492
+
+
+Saturated model: 
+
+Log Likelihood: -818.072138
+Number of free parameters: 20
+AIC: 1676.144275
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 1.785245.
+degrees of freedom: 2.
+p-value: 0.409580
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 27.672217
+degrees of freedom: 16.
+p-value: 0.034590
+
+
+________
+rat 11, pre vs post3
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.326259	1.605146	0.000000	0.020000	
+0.326259	1.605146	0.000000	0.020000	
+Log Likelihood: -821.737264
+Number of free parameters: 2
+AIC: 1647.474528
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.361370	1.604928	0.000000	0.020000	
+0.145064	1.692692	0.000000	0.020000	
+Log Likelihood: -815.584078
+Number of free parameters: 4
+AIC: 1639.168157
+
+
+Saturated model: 
+
+Log Likelihood: -805.326888
+Number of free parameters: 20
+AIC: 1650.653776
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 12.306371.
+degrees of freedom: 2.
+p-value: 0.002127
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 20.514381
+degrees of freedom: 16.
+p-value: 0.197941
+
+
+________
+rat 12, pre vs post1
+Missing time point for this rat
+
+________
+rat 12, pre vs post2
+Missing time point for this rat
+
+________
+rat 12, pre vs post3
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.198189	1.122051	0.000000	0.020000	
+0.198189	1.122051	0.000000	0.020000	
+Log Likelihood: -867.556820
+Number of free parameters: 2
+AIC: 1739.113641
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.185389	1.157292	0.000000	0.020000	
+0.385850	0.000000	0.000000	0.020000	
+Log Likelihood: -860.113232
+Number of free parameters: 4
+AIC: 1728.226463
+
+
+Saturated model: 
+
+Log Likelihood: -835.668106
+Number of free parameters: 14
+AIC: 1699.336211
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 14.887177.
+degrees of freedom: 2.
+p-value: 0.000585
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 48.890252
+degrees of freedom: 10.
+p-value: 0.000000
+
+
+________
+rat 13, pre vs post1
+Missing time point for this rat
+
+________
+rat 13, pre vs post2
+Missing time point for this rat
+
+________
+rat 13, pre vs post3
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.388647	0.868046	0.000000	0.020000	
+0.388647	0.868046	0.000000	0.020000	
+Log Likelihood: -783.333532
+Number of free parameters: 2
+AIC: 1570.667063
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.310723	0.981997	0.000000	0.020000	
+0.698442	0.601453	0.000000	0.020000	
+Log Likelihood: -777.347128
+Number of free parameters: 4
+AIC: 1562.694255
+
+
+Saturated model: 
+
+Log Likelihood: -771.606290
+Number of free parameters: 20
+AIC: 1583.212581
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 11.972808.
+degrees of freedom: 2.
+p-value: 0.002513
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 11.481675
+degrees of freedom: 16.
+p-value: 0.778824
+
+
+________
+rat 14, pre vs post1
+Missing time point for this rat
+
+________
+rat 14, pre vs post2
+Missing time point for this rat
+
+________
+rat 14, pre vs post3
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.161167	1.375203	0.000000	0.020000	
+0.161167	1.375203	0.000000	0.020000	
+Log Likelihood: -788.461565
+Number of free parameters: 2
+AIC: 1580.923129
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.192609	1.701690	0.000000	0.020000	
+-1.576104	0.106045	0.000000	0.020000	
+Log Likelihood: -730.293208
+Number of free parameters: 4
+AIC: 1468.586416
+
+
+Saturated model: 
+
+Log Likelihood: -720.780707
+Number of free parameters: 20
+AIC: 1481.561414
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 116.336714.
+degrees of freedom: 2.
+p-value: 0.000000
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 19.025001
+degrees of freedom: 16.
+p-value: 0.267369
+
+
+________
+rat 15, pre vs post1
+Missing time point for this rat
+
+________
+rat 15, pre vs post2
+Missing time point for this rat
+
+________
+rat 15, pre vs post3
+Missing time point for this rat
+
+________
+rat 16, pre vs post1
+Missing time point for this rat
+
+________
+rat 16, pre vs post2
+Missing time point for this rat
+
+________
+rat 16, pre vs post3
+Missing time point for this rat
+
+________
+rat 17, pre vs post1
+Missing time point for this rat
+
+________
+rat 17, pre vs post2
+Missing time point for this rat
+
+________
+rat 17, pre vs post3
+Missing time point for this rat
+
+________
+rat 19, pre vs post1
+
+Working ....
+
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.396959	1.074647	0.000000	0.020000	
+0.396959	1.074647	0.000000	0.020000	
+Log Likelihood: -789.172112
+Number of free parameters: 2
+AIC: 1582.344224
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.371330	1.092581	0.000000	0.020000	
+1.322598	0.699803	0.000000	0.020000	
+Log Likelihood: -783.732739
+Number of free parameters: 4
+AIC: 1575.465478
+
+
+Saturated model: 
+
+Log Likelihood: -770.506900
+Number of free parameters: 20
+AIC: 1581.013799
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 10.878745.
+degrees of freedom: 2.
+p-value: 0.004342
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 26.451679
+degrees of freedom: 16.
+p-value: 0.047995
+
+
+________
+rat 19, pre vs post2
+
+Working ....
+
+[Warning: Fit to data did not converge. Exiting.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PAL_PFLR_ModelComparison', '/Users/gkeliris/Documents/CODE/MatlabCode/tools/palamedes1_10_0/Palamedes/PAL_PFLR_ModelComparison.m', 318)" style="font-weight:bold">PAL_PFLR_ModelComparison</a> (<a href="matlab: opentoline('/Users/gkeliris/Documents/CODE/MatlabCode/tools/palamedes1_10_0/Palamedes/PAL_PFLR_ModelComparison.m',318,0)">line 318</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('gk_ModelComparisonTwoConditions', '/Users/gkeliris/GitHub/ratpsy/gk_ModelComparisonTwoConditions.m', 82)" style="font-weight:bold">gk_ModelComparisonTwoConditions</a> (<a href="matlab: opentoline('/Users/gkeliris/GitHub/ratpsy/gk_ModelComparisonTwoConditions.m',82,0)">line 82</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('analysisScript', '/Users/gkeliris/GitHub/ratpsy/analysisScript.m', 155)" style="font-weight:bold">analysisScript</a> (<a href="matlab: opentoline('/Users/gkeliris/GitHub/ratpsy/analysisScript.m',155,0)">line 155</a>)] 
+
+Lesser model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.382940	1.081851	0.000000	0.020000	
+0.382940	1.081851	0.000000	0.020000	
+Log Likelihood: -763.940960
+Number of free parameters: 2
+AIC: 1531.881920
+
+
+Fuller model: 
+
+Thresholds/PSEs	Slopes		Guess rates	Lapse rates
+0.371330	1.092581	0.000000	0.020000	
+899.038149	0.001414	0.000000	0.020000	
+Log Likelihood: -759.344895
+Number of free parameters: 4
+AIC: 1526.689790
+
+
+Saturated model: 
+
+Log Likelihood: -753.254064
+Number of free parameters: 12
+AIC: 1530.508127
+
+(Models with lower AICs are preferred over models with higher AICs)
+
+Null Hypothesis test Fuller vs Lesser model:
+Transformed Likelihood Ratio (asymptotically distributed as chi-square): 9.192130.
+degrees of freedom: 2.
+p-value: 0.010091
+
+Null Hypothesis test Fuller vs Saturated model (aka 'Goodness-of-Fit of Fuller Model'):
+Transformed Likelihood Ratio (aka 'Deviance' in context of Goodness-of-Fit: 12.181663
+degrees of freedom: 8.
+p-value: 0.143281
+
+
+________
+rat 19, pre vs post3
+Missing time point for this rat
+
+________
+rat 20, pre vs post1
+{Index in position 1 exceeds array bounds (must
+not exceed 19).
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('analysisScript', '/Users/gkeliris/GitHub/ratpsy/analysisScript.m', 152)" style="font-weight:bold">analysisScript</a> (<a href="matlab: opentoline('/Users/gkeliris/GitHub/ratpsy/analysisScript.m',152,0)">line 152</a>)
+        if isempty(N.post{rat,pst})
+} 
+diary(fullfile(d.dataPath,'Analysis','logfiles',['STATS_',datestr(now,30),'.txt']))
