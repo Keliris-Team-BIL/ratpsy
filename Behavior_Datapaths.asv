@@ -169,9 +169,9 @@ dat.pre4.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-03-10-143141
 dat.pre5.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-03-11-181512.txt');
 
 
-dat.post1.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-03-30-113411.txt');
-dat.post2.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-03-31-105707.txt');
-dat.post3.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-01-105717.txt');
+dat.pre5.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-03-30-113411.txt');
+dat.pre5.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-03-31-105707.txt');
+dat.pre5.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-01-105717.txt');
 
 
 
@@ -191,9 +191,9 @@ dat.pre3.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-03-10-1811
 dat.pre4.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-03-11-191942.txt');
 
 
-dat.post1.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-03-30-113411.txt');
-dat.post2.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-03-31-105707.txt');
-dat.post3.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-01-105717.txt');
+dat.pre4.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-03-30-113411.txt');
+dat.pre4.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-03-31-105707.txt');
+dat.pre4.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-01-105717.txt');
 
 
 
@@ -213,9 +213,9 @@ dat.post1.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-24-161
 dat.post2.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-25-160121.txt');
 dat.post3.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-26-155041.txt');
 
-dat.post4.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-31-155245.txt');
-dat.post5.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-01-151922.txt');
-dat.post6.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-02-145415.txt');
+dat.post3.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-31-155245.txt');
+dat.post3.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-01-151922.txt');
+dat.post3.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-26-155041.txt');
 
 
 

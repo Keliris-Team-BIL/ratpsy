@@ -92,7 +92,7 @@ gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='wrong',:), allDataPost(all
 for rat=[7,8,11,12,13,14,19]
     gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.outcome=='correct',:),...
         allDataPost(allDataPost.ratNumber==rat & allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
-    %title(['RT stim, outcome:correct, Rat number: ', num2str(rat)]);
+    title(['RT stim, outcome:correct, Rat number: ', num2str(rat)]);
 end
 for rat=[7,8,11,12,13,14,19]
     gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.outcome=='correct',:),...
