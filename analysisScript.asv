@@ -30,7 +30,7 @@ save(fullfile(d.dataPath,'Analysis','data'),'data');
 
 %% LOAD ALL DATA (after 1st time)
 d=Behavior_Datapaths('C:/Neuroscience/Github/Data',0); %this line is necessary before loading the data
-load(fullfile(d.dataPath,'Analysis','data')); % You can run this line straightaway after loading the data for the first time
+load(fullfile(d.dataPath,'Analysis','data')); % You can run this line straight away after loading the data for the first time
 
 %% POPULATION: ANALYSIS OF REACTION TIMES AND PREMATURE RESPONSES
 
@@ -48,7 +48,7 @@ end
 %First create variales for the data form each rat per each timepoint post
 %and save the in the variable 'data'
 allDataPost=[];
-for pi={'post1', 'post2', 'post3'}
+for pi={'post1', 'post2', 'post3', 'post4', 'post5', 'post6'}
     ratIDs=fieldnames(data.(pi{1}));
     for rat=[{ratIDs{:}}]
         %collapse all the data post and save it as the variable 'allDataPost'
@@ -58,7 +58,7 @@ for pi={'post1', 'post2', 'post3'}
 end
 
 % separate each post timepoint post and save them as a variable 'dataPost'
-for pi={'post1', 'post2', 'post3'}
+for pi={'post1', 'post2', 'post3', 'post4', 'post5', 'post6'}
     ratIDs=fieldnames(data.(pi{1}));
     dataPost.(pi{1})=[];
     for rat=[{ratIDs{:}}]
@@ -89,35 +89,42 @@ gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='wrong',:), allDataPost(all
 %gk_plot_prematureResp(allDataPre(allDataPre.response==2,:), allDataPost(allDataPost.response==2,:), {'pre','post'});
 
 %% ANALYSIS RAT BY RAT
-for rat=[7,8,11,12,13,14,19]
+for rat=[7,8,10,11,12,13,14,15,17,19]
     gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.outcome=='correct',:),...
         allDataPost(allDataPost.ratNumber==rat & allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
-    title(['RT stim, outcome:correct, Rat number: ', num2str(rat)]);
+    %title(['RT stim, outcome:correct, Rat number: ', num2str(rat)]);
 end
-for rat=[7,8,11,12,13,14,19]
+for rat=[7,8,10,11,12,13,14,15,17,19]
     gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.outcome=='correct',:),...
         allDataPost(allDataPost.ratNumber==rat & allDataPost.outcome=='correct',:), {'pre','post'},'RT_move');
-    title(['RT move, outcome:correct, Rat number: ', num2str(rat)]);
+    %title(['RT move, outcome:correct, Rat number: ', num2str(rat)]);
 end
+
+gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==7 & allDataPre.outcome=='correct',:),...
+        allDataPost(allDataPost.ratNumber==7 & allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
+
+gk_plot_reactionTimes(data(pre1.rat3907L & allDataPre.outcome=='correct',:),...
+        allDataPost(allDataPost.ratNumber==7 & allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
+    %title(['RT stim, outcome:correct, Rat number: ', num2str(rat)]);v
 % for rat=1:6
 %     gk_plot_prematureResp(allDataPre(allDataPre.ratNumber==rat,:), allDataPost(allDataPost.ratNumber==rat,:), {'pre','post'},'RT_stim');
 % end
 
 % plot only the trials to the left
-for rat=[7,8,11,12,13,14,19]
+for rat=[7,8,10,11,12,13,14,15,17,19]
     gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.response=='L',:),...
         allDataPost(allDataPost.ratNumber==rat & allDataPost.response=='L',:), {'pre','post'},'RT_stim');
     title(['RT stim, response:L, Rat number: ', num2str(rat)]);
 end
 % plot only the trials to the right
-for rat=[7,8,11,12,13,14,19]
+for rat=[7,8,10,11,12,13,14,15,17,19]
     gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.response=='R',:),...
         allDataPost(allDataPost.ratNumber==rat & allDataPost.response=='R',:), {'pre','post'},'RT_stim');
     title(['RT stim, response:R, Rat number: ', num2str(rat)]);
 end
 
 % compare left-right
-for rat=[7,8,11,12,13,14,19]
+for rat=[7,8,10,11,12,13,14,15,17,19]
     gk_plot_reactionTimes(allDataPre(allDataPost.ratNumber==rat & allDataPost.response=='L',:),...
         allDataPost(allDataPost.ratNumber==rat & allDataPost.response=='R',:), {'left','right'},'RT_stim');
     title(['RT stim, L vs R, Rat number: ', num2str(rat)]);
