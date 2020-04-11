@@ -71,7 +71,9 @@ save(fullfile(d.dataPath,'Analysis','data'),'allDataPre','allDataPost','dataPost
 %%
 % plot only the correct trials of all pre vs all post for reaction time
 J60rats=[12,13,14,17,19];
-gk_plot_reactionTimes(allDataPost(ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), {'J60','control'},'RT_stim');
+control=[7,8,10,11,15];
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), {'J60Pre','J60Post'},'RT_stim');
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct',:), {'controlPre','controlPost'},'RT_stim');
 
 gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
 
@@ -107,8 +109,8 @@ end
 gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==7 & allDataPre.outcome=='correct',:),...
         allDataPost(allDataPost.ratNumber==7 & allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
 
-gk_plot_reactionTimes(dada(data.pre1.rat3907L & data.pre1.rat3907L.outcome=='correct',:),...
-        data(dada(data.pre2.rat3907L & data.pre1.rat3907L.outcome=='correct',:), {'pre1','pre2'},'RT_stim');
+%gk_plot_reactionTimes(dada(data.pre1.rat3907L & data.pre1.rat3907L.outcome=='correct',:),...
+        %data(dada(data.pre2.rat3907L & data.pre1.rat3907L.outcome=='correct',:), {'pre1','pre2'},'RT_stim');
     %title(['RT stim, outcome:correct, Rat number: ', num2str(rat)]);v
 % for rat=1:6
 %     gk_plot_prematureResp(allDataPre(allDataPre.ratNumber==rat,:), allDataPost(allDataPost.ratNumber==rat,:), {'pre','post'},'RT_stim');
