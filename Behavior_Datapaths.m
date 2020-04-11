@@ -252,7 +252,6 @@ dat.post8.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-09-144
 
 
 
-
 %% Rat_20 got sacrificed;
 
 dat.pre1.(dat.ratIDs{12})=cat(2,dataPath,datafolders{12},'/3920LR-2020-03-04-170101.txt');
