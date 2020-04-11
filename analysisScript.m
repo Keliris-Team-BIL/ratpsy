@@ -25,7 +25,7 @@ for rat=[d.ratIDs]
         end
     end
 end
-%Saving the data as a variable called 'data' 
+%Saving the data as a variable called 'data'
 save(fullfile(d.dataPath,'Analysis','data'),'data');
 
 %% LOAD ALL DATA (after 1st time)
@@ -39,7 +39,7 @@ allDataPre=[];
 %and save the in the variable 'data'
 for pi={'pre1', 'pre2', 'pre3', 'pre4', 'pre5'}
     ratIDs=fieldnames(data.(pi{1}));
-    
+
     %collapse all the data pre and save it as the variable 'allDataPre'
     for rat=[{ratIDs{:}}]
         allDataPre=cat(1,allDataPre,data.(pi{1}).(rat{1}));
@@ -70,7 +70,11 @@ save(fullfile(d.dataPath,'Analysis','data'),'allDataPre','allDataPost','dataPost
 
 %%
 % plot only the correct trials of all pre vs all post for reaction time
+J60rats=[12,13,14,17,19];
+gk_plot_reactionTimes(allDataPost(ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), {'J60','control'},'RT_stim');
+
 gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
+
 %title('title')
 % plot only the correct trials of all pre vs all post for movement time
 gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_move');
