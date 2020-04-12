@@ -75,6 +75,13 @@ control=[7,8,10,11,15];
 gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), {'J60Pre','J60Post'},'RT_stim');
 gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct',:), {'controlPre','controlPost'},'RT_stim');
 
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_stim');
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='wrong',:), {'controlPre','controlPost'},'RT_stim');
+
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct'& allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_stim');
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct'& allDataPre.outcome== 'wrong',:), {'controlPre','controlPost'},'RT_stim');
+
+
 gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
 
 %title('title')
@@ -139,9 +146,9 @@ end
 %% PSYCHOMETRICS
 
 % Get the data per rat and timepoint
-for rat=[7,8,11,12,13,14,19]
+for rat=[7,8,10,11,12,13,14,15,17,19]
     N.pre{rat,1} = gk_get_psychometric(allDataPre(allDataPre.ratNumber==rat,:));
-    for pi={'post1','post2','post3'}
+    for pi={'post1','post2','post3','post4','post5','post6'}
         N.post{rat,str2double(pi{1}(end))} = ...
             gk_get_psychometric(dataPost.(pi{1})(dataPost.(pi{1}).ratNumber==rat,:));
     end
@@ -153,7 +160,7 @@ save(fullfile(d.dataPath,'Analysis','data'),'N','-append');
 diary(fullfile(d.dataPath,'Analysis','logfiles',['PF_',datestr(now,30),'.txt']))
 diary ON
 %figure;
-for rat=[7,8,11,12,13,14,19]
+for rat=[7,8,10,11,12,13,14,15,17,19]
    %subplot(2,3,rat); hold on;
    figure(100+rat);
    fprintf('\nFitting rat %d, pre\n_______\n',rat);
