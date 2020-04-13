@@ -113,6 +113,20 @@ for rat=[7,8,10,11,12,13,14,15,17,19]
     %title(['RT move, outcome:correct, Rat number: ', num2str(rat)]);
 end
 
+%Accuracy
+for rat=[7,8,10,11,12,13,14,15,17,19]
+    
+   Ncorrect= numel(allDataPre( allDataPre.outcome=='correct' & allDataPre.ratNumber==rat,1));
+   Nwrong= numel(allDataPre( allDataPre.outcome=='wrong' & allDataPre.ratNumber==rat,1));
+
+Accuracy = Ncorrect/(Ncorrect+ Nwrong) *100
+end
+
+for rat=[7,8,10,11,12,13,14,15,17,19]
+
+Accuracy= gk_get_psychometric(allDataPre(allDataPre.ratNumber==rat,:),1); 
+end
+
 gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==7 & allDataPre.outcome=='correct',:),...
         allDataPost(allDataPost.ratNumber==7 & allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
 

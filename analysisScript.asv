@@ -78,8 +78,8 @@ gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDat
 gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_stim');
 gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='wrong',:), {'controlPre','controlPost'},'RT_stim');
 
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPost.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct'& allDataPre.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_stim');
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPost.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct'& allDataPre.outcome== 'wrong',:), {'controlPre','controlPost'},'RT_stim');
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct'& allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_stim');
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct'& allDataPre.outcome== 'wrong',:), {'controlPre','controlPost'},'RT_stim');
 
 
 gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
@@ -111,6 +111,13 @@ for rat=[7,8,10,11,12,13,14,15,17,19]
     gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.outcome=='correct',:),...
         allDataPost(allDataPost.ratNumber==rat & allDataPost.outcome=='correct',:), {'pre','post'},'RT_move');
     %title(['RT move, outcome:correct, Rat number: ', num2str(rat)]);
+end
+
+%Accuracy
+for rat=[7,8,10,11,12,13,14,15,17,19]
+    correct= numel(allDataPre( allDataPre.outcome=='correct',allDataPre.ratNumber==rat:);
+    allTrials= numel(allDataPre.outcome=='correct'& 'wrong'& 'abort' & allDataPre(allDataPre.ratNumber==rat:);
+    Accuracy= correct / allTrials * 100
 end
 
 gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==7 & allDataPre.outcome=='correct',:),...
