@@ -29,6 +29,7 @@ end
 save(fullfile(d.dataPath,'Analysis','data'),'data');
 
 %% LOAD ALL DATA (after 1st time)
+
 d=Behavior_Datapaths('C:/Neuroscience/Github/Data',0); %this line is necessary before loading the data
 load(fullfile(d.dataPath,'Analysis','data')); % You can run this line straight away after loading the data for the first time
 
@@ -69,24 +70,30 @@ end
 save(fullfile(d.dataPath,'Analysis','data'),'allDataPre','allDataPost','dataPost','-append')
 
 %%
-% plot only the correct trials of all pre vs all post for reaction time
+% Split subjects into 2 groups and plot RT histograms  of all pre vs all post 
 J60rats=[12,13,14,17,19];
 control=[7,8,10,11,15];
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), {'J60Pre','J60Post'},'RT_stim');
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), { 'J60Pre','J60Post'},'RT_stim');
 gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct',:), {'controlPre','controlPost'},'RT_stim');
+
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), {'J60Pre','J60Post'},'RT_move');
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct',:), {'controlPre','controlPost'},'RT_move');
 
 gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_stim');
 gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='wrong',:), {'controlPre','controlPost'},'RT_stim');
 
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct'& allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_stim');
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct'& allDataPre.outcome== 'wrong',:), {'controlPre','controlPost'},'RT_stim');
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_move');
+gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='wrong',:), {'controlPre','controlPost'},'RT_move');
+
+% gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct'& allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_stim');
+% gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct'& allDataPre.outcome== 'wrong',:), {'controlPre','controlPost'},'RT_stim');
 
 
-gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
+% gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
 
 %title('title')
 % plot only the correct trials of all pre vs all post for movement time
-gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_move');
+% gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_move');
 %%
 %gk_plot_prematureResp(allDataPre(allDataPre.correct==1,:), allDataPost(allDataPost.correct==1,:), {'pre','post'});
 % plot only the wrong trials for reaction times and movement times
@@ -101,7 +108,7 @@ gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='wrong',:), allDataPost(all
 %gk_plot_reactionTimes(allDataPre(allDataPre.response==2,:), allDataPost(allDataPost.response==2,:), {'pre','post'});
 %gk_plot_prematureResp(allDataPre(allDataPre.response==2,:), allDataPost(allDataPost.response==2,:), {'pre','post'});
 
-%% ANALYSIS RAT BY RAT
+%% ANALYSIS RAT BY RAT: RT
 for rat=[7,8,10,11,12,13,14,15,17,19]
     gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==rat & allDataPre.outcome=='correct',:),...
         allDataPost(allDataPost.ratNumber==rat & allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
@@ -113,15 +120,7 @@ for rat=[7,8,10,11,12,13,14,15,17,19]
     %title(['RT move, outcome:correct, Rat number: ', num2str(rat)]);
 end
 
-%Accuracy
-for rat=[7,8,10,11,12,13,14,15,17,19]
-    correct= numel(allDataPre( allDataPre.outcome=='correct',allDataPre.ratNumber==rat:);
-    allTrials= numel(allDataPre.outcome=='correct'& 'wrong'& 'abort' & allDataPre(allDataPre.ratNumber==rat:);
-    Accuracy= correct / allTrials * 100
-end
 
-gk_plot_reactionTimes(allDataPre(allDataPre.ratNumber==7 & allDataPre.outcome=='correct',:),...
-        allDataPost(allDataPost.ratNumber==7 & allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
 
 %gk_plot_reactionTimes(dada(data.pre1.rat3907L & data.pre1.rat3907L.outcome=='correct',:),...
         %data(dada(data.pre2.rat3907L & data.pre1.rat3907L.outcome=='correct',:), {'pre1','pre2'},'RT_stim');
@@ -150,6 +149,40 @@ for rat=[7,8,10,11,12,13,14,15,17,19]
     title(['RT stim, L vs R, Rat number: ', num2str(rat)]);
 end
 
+%% ANALYSIS RAT BY RAT : Accuracy
+%Accuracy
+for rat=[7,8,10,11,12,13,14,15,17,19]
+    
+   Ncorrect= numel(allDataPre( allDataPre.outcome=='correct' & allDataPre.ratNumber==rat,1));
+   Nwrong= numel(allDataPre( allDataPre.outcome=='wrong' & allDataPre.ratNumber==rat,1));
+
+Accuracy = Ncorrect/(Ncorrect+ Nwrong) *100
+end
+
+for rat=[7,8,10,11,12,13,14,15,17,19]
+    
+   Ncorrect= numel(allDataPre( allDataPre.outcome=='correct' & allDataPre.ratNumber==rat,1));
+   Nwrong= numel(allDataPre( allDataPre.outcome=='wrong' & allDataPre.ratNumber==rat,1));
+   Nabort= numel(allDataPre( allDataPre.outcome=='abort' & allDataPre.ratNumber==rat,1));
+   Ntrial=numel(allDataPre( allDataPre.trialNumber& allDataPre.ratNumber==rat,1));
+anticipatoryRes = (Nabort/Ntrial) /((Ncorrect+ Nwrong)/Ntrial) *100
+end
+
+
+for rat=[7,8,10,11,12,13,14,15,17,19]
+
+Accuracy= gk_get_psychometric(allDataPre(allDataPre.ratNumber==rat,:),1); 
+
+end
+
+for rat=[7,8,10,11,12,13,14,15,17,19]
+    
+   Ncorrect= numel(allDataPre( allDataPre.outcome=='correct' & allDataPre.ratNumber==rat,1));
+   Nwrong= numel(allDataPre( allDataPre.outcome=='wrong' & allDataPre.ratNumber==rat,1));
+   Nabort= numel(allDataPre( allDataPre.outcome=='abort' & allDataPre.ratNumber==rat,1));
+   Ntrial=numel(allDataPre( allDataPre.trialNumber& allDataPre.ratNumber==rat,1));
+anticipatoryRes = (Nabort/Ntrial) /((Ncorrect+ Nwrong)/Ntrial) *100
+end
 %% PSYCHOMETRICS
 
 % Get the data per rat and timepoint
@@ -174,7 +207,7 @@ for rat=[7,8,10,11,12,13,14,15,17,19]
    [PF.pre.thresh(rat) PF.pre.slope(rat) PF.pre.SEthresh(rat)...
        PF.pre.SEslope(rat) PF.pre.Dev(rat) PF.pre.pDev(rat)] = ...
        gk_PAL_PFML(N.pre{rat}, [1 0.2 0.2]);
-   for pst=1:3
+   for pst=1:6
        fprintf('\nFitting rat %d, post %d\n_______\n',rat,pst);
        if ~isempty(N.post{rat,pst})
            [PF.post.thresh(rat,pst) PF.post.slope(rat,pst) PF.post.SEthresh(rat,pst)...
@@ -190,7 +223,7 @@ save(fullfile(d.dataPath,'Analysis','data'),'PF','-append')
 %% The statistics
 diary(fullfile(d.dataPath,'Analysis','logfiles',['STATS_',datestr(now,30),'.txt']))
 diary ON
-for rat=[7,8,11,12,13,14,19]
+for rat=[7,8,10,11,12,13,14,15,17,19]
     for pst=1:3
         fprintf('\n________\nrat %d, pre vs post%d\n',rat,pst);
         if isempty(N.post{rat,pst})
