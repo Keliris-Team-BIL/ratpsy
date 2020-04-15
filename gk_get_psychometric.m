@@ -44,8 +44,9 @@ for tt=1:numel(N.stimulus)
     N.total(tt)=numel(find(data.trialType==N.trialType(tt)));
     N.right(tt)=numel(find(data.trialType==N.trialType(tt) & data.response=='R'));
     N.left(tt)=numel(find(data.trialType==N.trialType(tt) & data.response=='L'));
+    N.percent(tt)=100*N.correct(tt)/N.total(tt);
     if printNumbers
-        fprintf('Stim = %.2f : %d/%d = %.2f %% \n',N.stimulus(tt),N.correct(tt),N.total(tt),100*N.correct(tt)/N.total(tt));
+        fprintf('Stim = %.2f : %d/%d = %.2f %% \n',N.stimulus(tt),N.correct(tt),N.total(tt), N.percent(tt));
     end
 end
 
