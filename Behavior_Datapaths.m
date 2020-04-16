@@ -89,6 +89,9 @@ dat.post4.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-04-06-1102
 dat.post5.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-04-07-105810.txt');
 dat.post6.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-04-08-105709.txt');
 
+dat.post7.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-04-13-110059.txt');
+dat.post8.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-04-14-105357.txt');
+dat.post9.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-04-15-111138.txt');
 
 %% Rat_11 Saline
 
@@ -200,6 +203,9 @@ dat.post4.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-06-11024
 dat.post5.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-07-105810.txt');
 dat.post6.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-08-105709.txt');
 
+dat.post7.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-13-110059.txt');
+dat.post8.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-14-105357.txt');
+dat.post9.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-15-111138.txt');
 
 %% Rat_16 got sacrificed
 
@@ -226,6 +232,9 @@ dat.post4.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-06-110
 %dat.post5.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/317L-2020-04-07-105810.txt');
 dat.post6.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-08-105709.txt');
 
+dat.post7.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-13-110059.txt');
+dat.post8.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-14-105357.txt');
+dat.post9.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-15-111138.txt');
 
 
 %% Rat_18 got sacrificed;
