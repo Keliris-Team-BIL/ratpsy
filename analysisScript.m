@@ -1,5 +1,5 @@
 % be in code directory
-d=Behavior_Datapaths('/Users/gkeliris/Documents/DATA/Ahmed/preLesionRawData',0);
+d=Behavior_Datapaths('/Users/gkeliris/GitHub/ratpsy/Data',0);
 
 %Create the folder where the analysis will be saved
 if ~isfolder(fullfile(d.dataPath,'Analysis'))
@@ -29,7 +29,7 @@ save(fullfile(d.dataPath,'Analysis','data'),'data');
 
 %% LOAD ALL DATA (after 1st time)
 
-d=Behavior_Datapaths('/Users/gkeliris/Documents/DATA/Ahmed/preLesionRawData',0);
+d=Behavior_Datapaths('/Users/gkeliris/GitHub/ratpsy/Data',0);
 load(fullfile(d.dataPath,'Analysis','data')); % You can run this line straight away after loading the data for the first time
 
 %% POPULATION: ANALYSIS OF REACTION TIMES AND PREMATURE RESPONSES

@@ -281,7 +281,7 @@ if verbose
     unfold(dat,false);
 
     for si=1:numel(s)
-        if isempty(strfind(s{si},'ratIDs'))
+        if isempty(strfind(s{si},'ratIDs')) && ~strcmp(s{si},dat.dataPath)
             if ~isfile(s{si})
                 fprintf('\nWARNING! NOT FOUND File: %s\n\n',...
                     s{si});
