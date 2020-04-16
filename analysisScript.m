@@ -1,6 +1,5 @@
 % be in code directory
-%d=Behavior_Datapaths('/Users/gkeliris/Documents/DATA/Ahmed/preLesionRawData',0);
-d=Behavior_Datapaths('C:/Neuroscience/Github/Data',0);
+d=Behavior_Datapaths('/Users/gkeliris/Documents/DATA/Ahmed/preLesionRawData',0);
 
 %Create the folder where the analysis will be saved
 if ~isfolder(fullfile(d.dataPath,'Analysis'))
@@ -30,7 +29,7 @@ save(fullfile(d.dataPath,'Analysis','data'),'data');
 
 %% LOAD ALL DATA (after 1st time)
 
-d=Behavior_Datapaths('C:/Neuroscience/Github/Data',0); %this line is necessary before loading the data
+d=Behavior_Datapaths('/Users/gkeliris/Documents/DATA/Ahmed/preLesionRawData',0);
 load(fullfile(d.dataPath,'Analysis','data')); % You can run this line straight away after loading the data for the first time
 
 %% POPULATION: ANALYSIS OF REACTION TIMES AND PREMATURE RESPONSES
@@ -70,7 +69,7 @@ end
 save(fullfile(d.dataPath,'Analysis','data'),'allDataPre','allDataPost','dataPost','-append')
 
 %%
-% Split subjects into 2 groups and plot RT histograms  of all pre vs all post 
+% Split subjects into 2 groups and plot RT histograms  of all pre vs all post
 J60rats=[12,13,14,17,19];
 control=[7,8,10,11,15];
 gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), { 'J60Pre','J60Post'},'RT_stim');
@@ -152,7 +151,7 @@ end
 %% ANALYSIS RAT BY RAT : Accuracy
 %Accuracy
 for rat=[7,8,10,11,12,13,14,15,17,19]
-    
+
    Ncorrect= numel(allDataPre( allDataPre.outcome=='correct' & allDataPre.ratNumber==rat,1));
    Nwrong= numel(allDataPre( allDataPre.outcome=='wrong' & allDataPre.ratNumber==rat,1));
 
@@ -163,13 +162,13 @@ end
 
 for rat=[7,8,10,11,12,13,14,15,17,19]
 
-Accuracy= gk_get_psychometric(allDataPre(allDataPre.ratNumber==rat,:),1); 
+Accuracy= gk_get_psychometric(allDataPre(allDataPre.ratNumber==rat,:),1);
 
 end
 
 %Anticipatory responses
 for rat=[7,8,10,11,12,13,14,15,17,19]
-    
+
    Nabort= numel(allDataPre( allDataPre.outcome=='abort' & allDataPre.ratNumber==rat,1));
    Ntrial=numel(allDataPre( allDataPre.trialNumber& allDataPre.ratNumber==rat,1));
 anticipatoryRes = (Nabort/Ntrial) /((Ncorrect+ Nwrong)/Ntrial) *100
