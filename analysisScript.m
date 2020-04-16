@@ -70,42 +70,74 @@ save(fullfile(d.dataPath,'Analysis','data'),'allDataPre','allDataPost','dataPost
 
 %%
 % Split subjects into 2 groups and plot RT histograms  of all pre vs all post
-J60rats=[12,13,14,17,19];
-control=[7,8,10,11,15];
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), { 'J60Pre','J60Post'},'RT_stim');
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct',:), {'controlPre','controlPost'},'RT_stim');
 
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct',:), {'J60Pre','J60Post'},'RT_move');
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct',:), {'controlPre','controlPost'},'RT_move');
+% get the RT for different conditions (NOTE: J60rats and SALrats is now
+% defined in the Behavior_Datapaths.m
 
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_stim');
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='wrong',:), {'controlPre','controlPost'},'RT_stim');
+RT.stim.J60.pre.correct  =allDataPre.RT_stim(ismember(allDataPre.ratNumber,d.J60rats) & allDataPre.outcome=='correct');
+RT.stim.J60.post.correct =allDataPost.RT_stim(~ismember(allDataPost.ratNumber,d.J60rats) & allDataPost.outcome=='correct');
+RT.stim.SAL.pre.correct  =allDataPre.RT_stim(ismember(allDataPre.ratNumber,d.SALrats) & allDataPre.outcome=='correct');
+RT.stim.SAL.post.correct =allDataPost.RT_stim(~ismember(allDataPost.ratNumber,d.SALrats) & allDataPost.outcome=='correct');
+RT.move.J60.pre.correct  =allDataPre.RT_move(ismember(allDataPre.ratNumber,d.J60rats) & allDataPre.outcome=='correct');
+RT.move.J60.post.correct =allDataPost.RT_move(~ismember(allDataPost.ratNumber,d.J60rats) & allDataPost.outcome=='correct');
+RT.move.SAL.pre.correct  =allDataPre.RT_move(ismember(allDataPre.ratNumber,d.SALrats) & allDataPre.outcome=='correct');
+RT.move.SAL.post.correct =allDataPost.RT_move(~ismember(allDataPost.ratNumber,d.SALrats) & allDataPost.outcome=='correct');
+RT.stim.J60.pre.wrong    =allDataPre.RT_stim(ismember(allDataPre.ratNumber,d.J60rats) & allDataPre.outcome=='wrong');
+RT.stim.J60.post.wrong   =allDataPost.RT_stim(~ismember(allDataPost.ratNumber,d.J60rats) & allDataPost.outcome=='wrong');
+RT.stim.SAL.pre.wrong    =allDataPre.RT_stim(ismember(allDataPre.ratNumber,d.SALrats) & allDataPre.outcome=='wrong');
+RT.stim.SAL.post.wrong   =allDataPost.RT_stim(~ismember(allDataPost.ratNumber,d.SALrats) & allDataPost.outcome=='wrong');
+RT.move.J60.pre.wrong    =allDataPre.RT_move(ismember(allDataPre.ratNumber,d.J60rats) & allDataPre.outcome=='wrong');
+RT.move.J60.post.wrong   =allDataPost.RT_move(~ismember(allDataPost.ratNumber,d.J60rats) & allDataPost.outcome=='wrong');
+RT.move.SAL.pre.wrong    =allDataPre.RT_move(ismember(allDataPre.ratNumber,d.SALrats) & allDataPre.outcome=='wrong');
+RT.move.SAL.post.wrong   =allDataPost.RT_move(~ismember(allDataPost.ratNumber,d.SALrats) & allDataPost.outcome=='wrong');
+RT.stim.J60.pre.all      =allDataPre.RT_stim(ismember(allDataPre.ratNumber,d.J60rats) & (allDataPre.outcome=='correct' | allDataPre.outcome=='wrong'));
+RT.stim.J60.post.all     =allDataPost.RT_stim(~ismember(allDataPost.ratNumber,d.J60rats) & (allDataPost.outcome=='correct' | allDataPost.outcome=='wrong'));
+RT.stim.SAL.pre.all      =allDataPre.RT_stim(ismember(allDataPre.ratNumber,d.SALrats) & (allDataPre.outcome=='correct' | allDataPre.outcome=='wrong'));
+RT.stim.SAL.post.all     =allDataPost.RT_stim(~ismember(allDataPost.ratNumber,d.SALrats) & (allDataPost.outcome=='correct' | allDataPost.outcome=='wrong'));
+RT.move.J60.pre.all      =allDataPre.RT_move(ismember(allDataPre.ratNumber,d.J60rats) & (allDataPre.outcome=='correct' | allDataPre.outcome=='wrong'));
+RT.move.J60.post.all     =allDataPost.RT_move(~ismember(allDataPost.ratNumber,d.J60rats) & (allDataPost.outcome=='correct' | allDataPost.outcome=='wrong'));
+RT.move.SAL.pre.all      =allDataPre.RT_move(ismember(allDataPre.ratNumber,d.SALrats) & (allDataPre.outcome=='correct' | allDataPre.outcome=='wrong'));
+RT.move.SAL.post.all     =allDataPost.RT_move(~ismember(allDataPost.ratNumber,d.SALrats) & (allDataPost.outcome=='correct' | allDataPost.outcome=='wrong'));
 
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_move');
-gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='wrong',:), {'controlPre','controlPost'},'RT_move');
+RT.total.J60.pre.all     =allDataPre.RT_move(ismember(allDataPre.ratNumber,d.J60rats) & ~isnan(allDataPre.RT_move) & ~isnan(allDataPre.RT_stim)) +...
+                            allDataPre.RT_stim(ismember(allDataPre.ratNumber,d.J60rats) & ~isnan(allDataPre.RT_move) & ~isnan(allDataPre.RT_stim));
+RT.total.J60.post.all     =allDataPost.RT_move(~ismember(allDataPost.ratNumber,d.J60rats) & ~isnan(allDataPost.RT_move) & ~isnan(allDataPost.RT_stim)) +...
+                            allDataPost.RT_stim(~ismember(allDataPost.ratNumber,d.J60rats) & ~isnan(allDataPost.RT_move) & ~isnan(allDataPost.RT_stim));
+RT.total.SAL.pre.all      =allDataPre.RT_move(ismember(allDataPre.ratNumber,d.SALrats) & ~isnan(allDataPre.RT_move) & ~isnan(allDataPre.RT_stim)) +...
+                            allDataPre.RT_stim(ismember(allDataPre.ratNumber,d.SALrats) & ~isnan(allDataPre.RT_move) & ~isnan(allDataPre.RT_stim));
+RT.total.SAL.post.all     =allDataPost.RT_move(~ismember(allDataPost.ratNumber,d.SALrats) & ~isnan(allDataPost.RT_move) & ~isnan(allDataPost.RT_stim))+...
+                            allDataPost.RT_stim(~ismember(allDataPost.ratNumber,d.SALrats) & ~isnan(allDataPost.RT_move) & ~isnan(allDataPost.RT_stim));
 
-% gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,J60rats) & allDataPre.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,J60rats) & allDataPost.outcome=='correct'& allDataPost.outcome=='wrong',:), {'J60Pre','J60Post'},'RT_stim');
-% gk_plot_reactionTimes(allDataPre(ismember(allDataPre.ratNumber,control) & allDataPre.outcome=='correct'& allDataPre.outcome== 'wrong',:), allDataPost(~ismember(allDataPost.ratNumber,control) & allDataPost.outcome=='correct'& allDataPre.outcome== 'wrong',:), {'controlPre','controlPost'},'RT_stim');
+save(fullfile(d.dataPath,'Analysis','data'),'RT','-append')                        
+                        
+%% PLOT different combinations of pairs 
+d=Behavior_Datapaths('/Users/gkeliris/GitHub/ratpsy/Data',0);
+load(fullfile(d.dataPath,'Analysis','data')); % You can run this line straight away after loading the data for the first time
+
+gk_plot_reactionTimes(RT.stim.J60.pre.correct,RT.stim.J60.post.correct,{'stmJ60PreC','stmJ60PostC'});
+gk_plot_reactionTimes(RT.stim.SAL.pre.correct,RT.stim.SAL.post.correct,{'stmSALPreC','stmSALPostC'});
+gk_plot_reactionTimes(RT.move.J60.pre.correct,RT.move.J60.post.correct,{'movJ60PreC','movJ60PostC'});
+gk_plot_reactionTimes(RT.move.SAL.pre.correct,RT.move.SAL.post.correct,{'movSALPreC','movSALPostC'});
+gk_plot_reactionTimes(RT.stim.J60.pre.wrong,RT.stim.J60.post.wrong,{'stmJ60PreW','stmJ60PostW'});
+gk_plot_reactionTimes(RT.stim.SAL.pre.wrong,RT.stim.SAL.post.wrong,{'stmSALPreW','stmSALPostW'});
+gk_plot_reactionTimes(RT.move.J60.pre.wrong,RT.move.J60.post.wrong,{'movJ60PreW','movJ60PostW'});
+gk_plot_reactionTimes(RT.move.SAL.pre.wrong,RT.move.SAL.post.wrong,{'movSALPreW','movSALPostW'});
+gk_plot_reactionTimes(RT.stim.J60.pre.all,RT.stim.J60.post.all,{'stmJ60PreA','stmJ60PostA'});
+gk_plot_reactionTimes(RT.stim.SAL.pre.all,RT.stim.SAL.post.all,{'stmSALPreA','stmSALPostA'});
+gk_plot_reactionTimes(RT.move.J60.pre.all,RT.move.J60.post.all,{'movJ60PreA','movJ60PostA'});
+gk_plot_reactionTimes(RT.move.SAL.pre.all,RT.move.SAL.post.all,{'movSALPreA','movSALPostA'});
+gk_plot_reactionTimes(RT.total.J60.pre.all,RT.total.J60.post.all,{'totJ60PreA','totJ60PostA'});
+gk_plot_reactionTimes(RT.total.SAL.pre.all,RT.total.SAL.post.all,{'totSALPreA','totSALPostA'});
 
 
-% gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_stim');
 
 %title('title')
 % plot only the correct trials of all pre vs all post for movement time
 % gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='correct',:), allDataPost(allDataPost.outcome=='correct',:), {'pre','post'},'RT_move');
 %%
 %gk_plot_prematureResp(allDataPre(allDataPre.correct==1,:), allDataPost(allDataPost.correct==1,:), {'pre','post'});
-% plot only the wrong trials for reaction times and movement times
-gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='wrong',:), allDataPost(allDataPost.outcome=='wrong',:), {'pre','post'},'RT_stim');
-gk_plot_reactionTimes(allDataPre(allDataPre.outcome=='wrong',:), allDataPost(allDataPost.outcome=='wrong',:), {'pre','post'},'RT_move');
 
-%gk_plot_prematureResp(allDataPre(allDataPre.correct==0,:), allDataPost(allDataPost.correct==0,:), {'pre','post'});
-% plot all the trials to the left
-%gk_plot_reactionTimes(allDataPre(allDataPre.response==1,:), allDataPost(allDataPost.response==1,:), {'pre','post'});
-%gk_plot_prematureResp(allDataPre(allDataPre.response==1,:), allDataPost(allDataPost.response==1,:), {'pre','post'});
-% plot all the trials to the right
-%gk_plot_reactionTimes(allDataPre(allDataPre.response==2,:), allDataPost(allDataPost.response==2,:), {'pre','post'});
-%gk_plot_prematureResp(allDataPre(allDataPre.response==2,:), allDataPost(allDataPost.response==2,:), {'pre','post'});
+
 
 %% ANALYSIS RAT BY RAT: RT
 for rat=[7,8,10,11,12,13,14,15,17,19]

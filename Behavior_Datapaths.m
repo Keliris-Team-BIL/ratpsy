@@ -21,6 +21,8 @@ dat.ratIDs={'rat3907L','rat3908LR','rat3910LR','rat3911L','rat3912LR','rat3913L'
             'rat3917L','rat3919L','rat3920LR'};
 datafolders={'/Rat_07','/Rat_08','/Rat_10','/Rat_11','/Rat_12','/Rat_13','/Rat_14','/Rat_15','/Rat_16','/Rat_17',...
               '/Rat_19','/Rat_20'};
+dat.J60rats=[12,13,14,17,19];
+dat.SALrats=[7,8,10,11,15];
 
 %
 %% RAW DATA
@@ -281,7 +283,7 @@ if verbose
     unfold(dat,false);
 
     for si=1:numel(s)
-        if isempty(strfind(s{si},'ratIDs')) && ~strcmp(s{si},dat.dataPath)
+        if ischar(s{si}) && isempty(strfind(s{si},'ratIDs')) && ~strcmp(s{si},dat.dataPath)
             if ~isfile(s{si})
                 fprintf('\nWARNING! NOT FOUND File: %s\n\n',...
                     s{si});
