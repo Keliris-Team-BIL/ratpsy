@@ -19,7 +19,7 @@ end
 % define reference events and prints via E_P_cells (i.e. {{Es},{Ps}}
 trialStart={{},{'correct'}};
 trialEnd={{'ITI','aborted_fixation','aborted_response'},{}};
-%trialNum={{},{'n_trials'}};
+trialNum={{},{'n_trials'}};
 trialPWL={{},{'pW_L'}};
 trialPWR={{},{'pW_R'}};
 trialType={{},{'pW_L'}};
@@ -31,12 +31,13 @@ trialAbort={{},{'n_aborted_fixation','n_aborted_response'}};
 trialStimON={{'display_stimulus'},{}};
 trialActive={{'reward_available'},{}};
 trialAbortResponse={{},{'n_aborted_response'}};
+centerPokes={{'center_poke'},{}};
 
 
 %%
 trStart=gk_pyControl_collapse_events(info,trialStart);
 trEnd=gk_pyControl_collapse_events(info,trialEnd,trStart);
-%trNum=gk_pyControl_collapse_events(info,trialNum,trStart,trEnd);
+trNum=gk_pyControl_collapse_events(info,trialNum,trStart,trEnd);
 trType=gk_pyControl_collapse_events(info,trialType,trStart,trEnd);
 trResponse=gk_pyControl_collapse_events(info,trialResponse,trStart,trEnd);
 trPWL=gk_pyControl_collapse_events(info,trialPWL,trStart,trEnd);
@@ -54,6 +55,8 @@ trSidePoke=gk_pyControl_subtract_events(trResponse,trAbort);
 [stimRT, trials1]=gk_pyControl_timediff(trActive,trStimON);
 [moveRT, trials2]=gk_pyControl_timediff(trSidePoke,trActiveMove);
 
+allCenterPokes=gk_pyControl_collapse_events(info,centerPokes);
+prematureResponses = gk_pyControl_getPreTrialEventNum(trEnd, trNum, allCenterPokes);
 
 %% Define the variables to enter in the data table
 trialNumber=trEnd.trialNum;
@@ -79,16 +82,6 @@ RT_move=NaN(trialNumber(end),1); RT_move(trials2)=moveRT;
 ratNumber=repmat(ratNum,numel(trialNumber),1);
 
 %% Create that data table
-data=table(trialNumber,trialType,pw_L,pw_R,response,outcome,RT_stim,RT_move,ratNumber);
+data=table(trialNumber,trialType,pw_L,pw_R,response,outcome,RT_stim,RT_move,prematureResponses,ratNumber);
 
 %data=table(trialType,stimType,response,correct,stimOnTime,reactionTime,trialStart,trialEnd,preMature,ratNumber);
-
-
-
-
-
-
-
-
-
-
