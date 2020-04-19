@@ -56,7 +56,7 @@ trSidePoke=gk_pyControl_subtract_events(trResponse,trAbort);
 [moveRT, trials2]=gk_pyControl_timediff(trSidePoke,trActiveMove);
 
 allCenterPokes=gk_pyControl_collapse_events(info,centerPokes);
-prematureResponses = gk_pyControl_getPreTrialEventNum(trEnd, trNum, allCenterPokes);
+prematureResponses = gk_pyControl_getPreTrialEventNum(trEnd, trStart, allCenterPokes);
 
 %% Define the variables to enter in the data table
 trialNumber=trEnd.trialNum;

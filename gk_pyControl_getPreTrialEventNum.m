@@ -16,7 +16,7 @@ function numEventsBeforeTrial = gk_pyControl_getPreTrialEventNum(trialEndEvent, 
 %
 % v1.0 GAK 4 Mar 2020
 numEventsBeforeTrial(1)=0;
-for i=2:numel(trialStartEvent.times)
+for i=2:numel(trialEndEvent.times)
     events=find(event.idx>trialEndEvent.idx(i-1) & event.idx<trialStartEvent.idx(i));
     numEventsBeforeTrial(i,1)=numel(events);
 end
