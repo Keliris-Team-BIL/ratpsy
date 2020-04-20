@@ -38,7 +38,8 @@ for rat=[7,8,10,11,12,13,14,15,17,19]
     pre=allDataPre.RT_stim(allDataPre.ratNumber==rat & allDataPre.outcome=='correct');
     post=allDataPost.RT_stim(allDataPost.ratNumber==rat & allDataPost.outcome=='correct');
     gk_plot_reactionTimes(pre,post,{'pre','post'});
-    %title(['RT stim, outcome:correct, Rat number: ', num2str(rat)]);
+    XL=xlim; YL=ylim;
+    text(0.05*XL(2),0.98*YL(2),['RT stim, outcome:correct, Rat number: ', num2str(rat)]);
 end
 
 % RT move
@@ -46,15 +47,17 @@ for rat=[7,8,10,11,12,13,14,15,17,19]
     pre=allDataPre.RT_move(allDataPre.ratNumber==rat & allDataPre.outcome=='correct');
     post=allDataPost.RT_move(allDataPost.ratNumber==rat & allDataPost.outcome=='correct');
     gk_plot_reactionTimes(pre,post,{'preM','postM'});
-    %title(['RT stim, outcome:correct, Rat number: ', num2str(rat)]);
+    XL=xlim; YL=ylim;
+    text(0.05*XL(2),0.98*YL(2),['RT move, outcome:correct, Rat number: ', num2str(rat)]);
 end
 
 % compare left-right
 for rat=[7,8,10,11,12,13,14,15,17,19]
-    left=allDataPre.RT_stim(allDataPost.ratNumber==rat & allDataPost.response=='L');
-    right=allDataPost.RT_stim(allDataPost.ratNumber==rat & allDataPost.response=='R',:);
+    left=allDataPost.RT_stim(allDataPost.ratNumber==rat & allDataPost.response=='L');
+    right=allDataPost.RT_stim(allDataPost.ratNumber==rat & allDataPost.response=='R');
     gk_plot_reactionTimes(left,right,{'left','right'});
-    title(['RT stim, L vs R, Rat number: ', num2str(rat)]);
+    XL=xlim; YL=ylim;
+    text(0.05*XL(2),0.98*YL(2),['RT stim, L vs R, Rat number: ', num2str(rat)]);
 end
 
 
