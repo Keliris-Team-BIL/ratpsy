@@ -43,14 +43,15 @@ end
 
 for rat=[d.ratIDs]
     for ti=fields([preFields; postFields])'
-        if isfield(d.(ti{1}),rat{1})      	
-            if isempty(find(cellfun(@(x) strcmp(x,d.(ti{1}).(rat{1})),imported_files),1))
+        if isfield(d.(ti{1}),rat{1})
+            [~,curFile,ext]=fileparts(d.(ti{1}).(rat{1}));
+            if isempty(find(cellfun(@(x) strcmp(x,curFile),imported_files),1))
                 saveFile=true;
                 fprintf('\n\nPROCESSING:%s, %s\n',rat{1},ti{1});
-                fprintf('Importing new file:%s\n',d.(ti{1}).(rat{1}))
+                fprintf('Importing new file: %s\n',curFile)
                 info.(ti{1}).(rat{1})=gk_pyControl_read(d.(ti{1}).(rat{1}));
                 data.(ti{1}).(rat{1})=gk_ratpsy_data_import(info.(ti{1}).(rat{1}),str2num(rat{1}(6:7)));
-                imported_files{end+1,1}=d.(ti{1}).(rat{1});
+                imported_files{end+1,1}=curFile;
             else
                 saveFile=false;
             end
