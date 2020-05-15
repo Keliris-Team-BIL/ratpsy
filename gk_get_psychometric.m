@@ -45,7 +45,7 @@ for tt=1:numel(N.stimulus)
     %cond{tt}=data(data.trialType==N.trialType(tt),:);
     
     N.correct(tt)=numel(find(data.trialType==N.trialType(tt) & data.outcome=='correct'));
-    N.total(tt)=numel(find(data.trialType==N.trialType(tt)));
+    N.total(tt)=numel(find(data.trialType==N.trialType(tt) & (data.outcome=='correct' | data.outcome=='wrong')));
     N.right(tt)=numel(find(data.trialType==N.trialType(tt) & data.response=='R'));
     N.left(tt)=numel(find(data.trialType==N.trialType(tt) & data.response=='L'));
     N.percent(tt)=100*N.correct(tt)/N.total(tt);
