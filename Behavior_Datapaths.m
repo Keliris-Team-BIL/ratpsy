@@ -12,7 +12,7 @@ end
 
 %%% PATHS THAT POTENTIALLY NEED TO BE UPDATED %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if nargin<1
-    dataPath='C:/Neuroscience/Github/Data';
+    dataPath='C:/Neuroscience/Github/Keliris-Team-ratpsy-codeDev/Data';
 end
 dat.dataPath=dataPath;
 
@@ -49,7 +49,14 @@ dat.post7.(dat.ratIDs{1})=cat(2,dataPath,datafolders{1},'/3907L-2020-04-08-12293
 dat.post8.(dat.ratIDs{1})=cat(2,dataPath,datafolders{1},'/3907L-2020-04-09-122923.txt');
 dat.post9.(dat.ratIDs{1})=cat(2,dataPath,datafolders{1},'/3907L_-2020-04-10-130524.txt');
 
+%Post experiment1: All saline
+dat.post10.(dat.ratIDs{1})=cat(2,dataPath,datafolders{1},'/3907L-2020-04-29-123627.txt');
+dat.post11.(dat.ratIDs{1})=cat(2,dataPath,datafolders{1},'/3907L-2020-04-30-124138.txt');
+dat.post12.(dat.ratIDs{1})=cat(2,dataPath,datafolders{1},'/3907L-2020-05-01-122905.txt');
 
+%Experiment2: Logarithmic distribution
+%dat.post13.(dat.ratIDs{1})=cat(2,dataPath,datafolders{1},'/3907L-2020-05-13-125210.txt');
+dat.post15.(dat.ratIDs{1})=cat(2,dataPath,datafolders{1},'/3907L-2020-05-15-131520.txt');
 
 %% Rat_08 Saline
 
@@ -72,8 +79,15 @@ dat.post7.(dat.ratIDs{2})=cat(2,dataPath,datafolders{2},'/3908LR-2020-04-08-1229
 dat.post8.(dat.ratIDs{2})=cat(2,dataPath,datafolders{2},'/3908LR-2020-04-09-122923.txt');
 dat.post9.(dat.ratIDs{2})=cat(2,dataPath,datafolders{2},'/3908LR_-2020-04-10-130524.txt');
 
+%Post experiment1: All saline
+dat.post10.(dat.ratIDs{2})=cat(2,dataPath,datafolders{2},'/3908LR-2020-04-29-123627.txt');
+dat.post11.(dat.ratIDs{2})=cat(2,dataPath,datafolders{2},'/3908LR-2020-04-30-124138.txt');
+dat.post12.(dat.ratIDs{2})=cat(2,dataPath,datafolders{2},'/3908LR-2020-05-01-122905.txt');
 
-
+%Experiment2: Logarithmic distribution
+dat.post13.(dat.ratIDs{2})=cat(2,dataPath,datafolders{2},'/3908LR-2020-05-13-125210.txt');
+dat.post14.(dat.ratIDs{2})=cat(2,dataPath,datafolders{2},'/3908LR-2020-05-14-125908.txt');
+dat.post15.(dat.ratIDs{2})=cat(2,dataPath,datafolders{2},'/3908LR-2020-05-15-131520.txt');
 %% Rat_10 Saline
 
 %dat.pre1.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-03-04-142547.txt');
@@ -94,6 +108,12 @@ dat.post6.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-04-08-1057
 dat.post7.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-04-13-110059.txt');
 dat.post8.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-04-14-105357.txt');
 dat.post9.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-04-15-111138.txt');
+
+%Post experiment1: All saline
+dat.post10.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-05-04-110304.txt');
+dat.post11.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-05-05-105918.txt');
+dat.post12.(dat.ratIDs{3})=cat(2,dataPath,datafolders{3},'/3910LR-2020-05-06-110654.txt');
+
 
 %% Rat_11 Saline
 
@@ -116,6 +136,15 @@ dat.post7.(dat.ratIDs{4})=cat(2,dataPath,datafolders{4},'/3911L-2020-04-07-13584
 dat.post8.(dat.ratIDs{4})=cat(2,dataPath,datafolders{4},'/3911L-2020-04-08-134440.txt');
 dat.post9.(dat.ratIDs{4})=cat(2,dataPath,datafolders{4},'/3911L-2020-04-09-133817.txt');
 
+%Post experiment1: All saline
+dat.post10.(dat.ratIDs{4})=cat(2,dataPath,datafolders{4},'/3911L-2020-04-28-135616.txt');
+dat.post11.(dat.ratIDs{4})=cat(2,dataPath,datafolders{4},'/3911L-2020-04-29-135319.txt');
+dat.post12.(dat.ratIDs{4})=cat(2,dataPath,datafolders{4},'/3911L-2020-04-30-134851.txt');
+
+%All saline_ New condtions +logarithmically distributed
+dat.post13.(dat.ratIDs{4})=cat(2,dataPath,datafolders{4},'/3911L-2020-05-12-135625.txt');
+dat.post14.(dat.ratIDs{4})=cat(2,dataPath,datafolders{4},'/3911L-2020-05-13-142349.txt');
+dat.post15.(dat.ratIDs{4})=cat(2,dataPath,datafolders{4},'/3911L-2020-05-14-140954.txt');
 
 
 %% Rat_12 J60
@@ -139,6 +168,15 @@ dat.post7.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/3912LR-2020-04-07-1358
 dat.post8.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/3912LR-2020-04-08-134440.txt');
 dat.post9.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/3912LR-2020-04-09-133817.txt');
 
+%Post experiment1: All saline
+dat.post10.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/3912LR-2020-04-28-135616.txt');
+dat.post11.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/3912LR-2020-04-29-135319.txt');
+%dat.post12.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/3912LR-2020-04-30-134851.txt');
+
+%Experiment2: Logarithmic distribution
+dat.post13.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/3912LR-2020-05-12-135625.txt');
+dat.post14.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/3912LR-2020-05-13-142349.txt');
+dat.post15.(dat.ratIDs{5})=cat(2,dataPath,datafolders{5},'/33912LR-2020-05-14-140954.txt');
 
 
 %% Rat_13 J60
@@ -163,7 +201,14 @@ dat.post7.(dat.ratIDs{6})=cat(2,dataPath,datafolders{6},'/3913L-2020-04-08-12293
 dat.post8.(dat.ratIDs{6})=cat(2,dataPath,datafolders{6},'/3913L-2020-04-09-122923.txt');
 dat.post9.(dat.ratIDs{6})=cat(2,dataPath,datafolders{6},'/3913L-2020-04-10-130524.txt');
 
+%Post experiment1: All saline
+dat.post10.(dat.ratIDs{6})=cat(2,dataPath,datafolders{6},'/3913L-2020-04-29-123627.txt');%171 suc.Fix
+dat.post11.(dat.ratIDs{6})=cat(2,dataPath,datafolders{6},'/3913L-2020-04-30-124138.txt');%177 suc.Fix
+dat.post12.(dat.ratIDs{6})=cat(2,dataPath,datafolders{6},'/3913L-2020-05-01-122905.txt');
 
+%Experiment2: Logarithmic distribution
+dat.post13.(dat.ratIDs{6})=cat(2,dataPath,datafolders{6},'/3913L-2020-05-13-125210.txt');
+dat.post14.(dat.ratIDs{6})=cat(2,dataPath,datafolders{6},'/3913L-2020-05-14-125908.txt');%190 suc.Fix
 
 %% Rat_14 J60
 
@@ -182,11 +227,18 @@ dat.pre5.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-03-11-19194
 dat.post5.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-04-02-124353.txt');
 dat.post6.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-04-03-123642.txt');
 
-dat.post7.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-04-08-122931.txt');
-%dat.post8.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-04-09-122923.txt');
+%dat.post7.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-04-08-122931.txt');
+dat.post8.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-04-09-122923.txt');
 %dat.post9.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-04-10-130524 (2).txt');
 
+%Post experiment1: All saline
+dat.post10.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-04-29-123627.txt');
+dat.post11.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-04-30-124138.txt');
+dat.post12.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-05-01-122905.txt');
 
+%Experiment2: Logarithmic distribution
+dat.post13.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-05-13-125210.txt');
+dat.post14.(dat.ratIDs{7})=cat(2,dataPath,datafolders{7},'/3914LR-2020-05-14-125908.txt');
 
 %% Rat_15 Saline
 
@@ -208,6 +260,11 @@ dat.post6.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-08-10570
 dat.post7.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-13-110059.txt');
 dat.post8.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-14-105357.txt');
 dat.post9.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-04-15-111138.txt');
+
+%Post experiment1: All saline
+dat.post10.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-05-04-110304.txt');
+dat.post11.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-05-05-105918.txt');
+dat.post12.(dat.ratIDs{8})=cat(2,dataPath,datafolders{8},'/3915L-2020-05-06-110654.txt');
 
 %% Rat_16 got sacrificed
 
@@ -231,13 +288,17 @@ dat.post2.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-03-31-105
 dat.post3.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-01-105717.txt');
 
 dat.post4.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-06-110247.txt');
-%dat.post5.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/317L-2020-04-07-105810.txt');
+dat.post5.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/317L-2020-04-07-105810.txt');%179
 dat.post6.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-08-105709.txt');
 
 dat.post7.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-13-110059.txt');
 dat.post8.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-14-105357.txt');
 dat.post9.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-04-15-111138.txt');
 
+%Post experiment1: All saline
+%dat.post10.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-05-04-110304.txt');156S.F
+dat.post11.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-05-05-105918.txt');
+dat.post12.(dat.ratIDs{10})=cat(2,dataPath,datafolders{10},'/3917L-2020-05-06-110654.txt');
 
 %% Rat_18 got sacrificed;
 
@@ -255,14 +316,25 @@ dat.pre5.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-11-1919
 %dat.post2.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-25-160121.txt');
 %dat.post3.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-26-155041.txt');
 
-%dat.post4.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-31-155245.txt');
+dat.post4.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-03-31-155245.txt');%183
+%succ. fix
 %dat.post5.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-01-151922.txt');
-%dat.post6.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-02-145415.txt');
+dat.post6.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-02-145415.txt');%188
+%succ. fix
 
 dat.post7.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-07-152437.txt');
 dat.post8.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-08-150848.txt'); %192 succ.Fixations
 %dat.post9.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-09-144335.txt');
 
+%Post experiment1: All saline
+dat.post10.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-28-150129.txt');
+dat.post11.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-29-150422.txt');
+%dat.post12.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-04-30-145739.txt');
+
+%Experiment2: Logarithmic distribution
+%dat.post13.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-05-12-150050.txt');
+dat.post14.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-05-13-153553.txt');
+dat.post15.(dat.ratIDs{11})=cat(2,dataPath,datafolders{11},'/3919L-2020-05-14-150223.txt');%195 succ.Fix
 
 
 %% Rat_20 got sacrificed;

@@ -11,3 +11,6 @@ PMR.J60.pre.all=allDataPre.prematureResponses(ismember(allDataPre.ratNumber,d.J6
 PMR.J60.post.all=allDataPost.prematureResponses(ismember(allDataPost.ratNumber,d.J60rats));
 PMR.SAL.pre.all=allDataPre.prematureResponses(ismember(allDataPre.ratNumber,d.SALrats));
 PMR.SAL.post.all=allDataPost.prematureResponses(ismember(allDataPost.ratNumber,d.SALrats));
+
+PMR.rat.pre.all=allDataPre.prematureResponses(ismember(allDataPre.ratNumber,d.J60rats));
+
