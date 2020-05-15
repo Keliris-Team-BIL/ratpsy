@@ -49,6 +49,11 @@ for rat=[d.ratIDs]
                 saveFile=true;
                 fprintf('\n\nPROCESSING:%s, %s\n',rat{1},ti{1});
                 fprintf('Importing new file: %s\n',curFile)
+                testFID=fopen(d.(ti{1}).(rat{1}));
+                if testFID<0
+                    fprintf('ERROR: Cannot open file - NOT IMPORTED\n')
+                    continue
+                end
                 info.(ti{1}).(rat{1})=gk_pyControl_read(d.(ti{1}).(rat{1}));
                 data.(ti{1}).(rat{1})=gk_ratpsy_data_import(info.(ti{1}).(rat{1}),str2num(rat{1}(6:7)));
                 imported_files{end+1,1}=curFile;
@@ -58,7 +63,6 @@ for rat=[d.ratIDs]
         end
     end
 end
-if saveFile
-    %Saving the data as a variable called 'data'
-    save(fullfile(d.dataPath,'Analysis','data'),'data','imported_files');
-end
+
+%Saving the data as a variable called 'data'
+save(fullfile(d.dataPath,'Analysis','data'),'data','imported_files');
