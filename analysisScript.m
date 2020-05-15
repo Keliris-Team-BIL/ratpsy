@@ -7,6 +7,7 @@ data=gk_ratpsy_readData('/Users/gkeliris/GitHub/ratpsy/Data',forceRecalc);
 % hand i.e. {'pre1','post5','post6'} in arbitrary combinations
 allDataPre=gk_ratpsy_collapseTimepoints(data,'allPre');
 allDataPost=gk_ratpsy_collapseTimepoints(data,'allPost');
+logPost=gk_ratpsy_collapseTimepoints(data,{'post13','post14','post15'});
 
 dataPre=gk_ratpsy_collectTimepoints(data,'allPre');
 dataPost=gk_ratpsy_collectTimepoints(data,'allPost');
@@ -81,7 +82,8 @@ end
 
 for rat=[7,8,10,11,12,13,14,15,17,19]
 
-    Nacc(rat)= gk_get_psychometric(allDataPre(allDataPre.ratNumber==rat,:),1);
+    %Nacc(rat)= gk_get_psychometric(allDataPre(allDataPre.ratNumber==rat,:),1);
+    Nacc(rat)= gk_get_psychometric(logPost(logPost.ratNumber==rat,:),1);
 
 end
 
