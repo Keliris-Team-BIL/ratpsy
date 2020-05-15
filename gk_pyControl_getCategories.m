@@ -1,5 +1,5 @@
 function [valueCateg typeCateg] = gk_pyControl_getCategories(event, value_rename, type_rename, verbose)
-% USAGE: [valueCateg typeCateg] = gk_pyControl_getCategories(event, [value_rename], [type_rename],[verbose])
+% USAGE: [valueCateg typeCateg] = gk_pyControl_getCategories(event, [value_rename], [type_rename], [verbose])
 %
 % INFO: this function will extract the value and type categories from
 % events and can additionally rename the categories for easy entering in
@@ -7,7 +7,8 @@ function [valueCateg typeCateg] = gk_pyControl_getCategories(event, value_rename
 %
 % INPUT:
 % - event        : the event returned from gk_pyControl_collapse_events
-% - value_rename : a cell with new names for the value categories [opt]
+% - value_rename : a cell with new names for the value categories [opt], if
+%                  this is a string 'autonum' it will sort them numerically
 % - type_rename  : a cell with new names for the type categories [opt]
 % - verbose      : if true print categories
 %
@@ -43,8 +44,16 @@ if nargin==1 | isempty(value_rename)
     V_rename=categories(val_tmp);
 else
     V_cts=categories(val_tmp);
-    for i=1:numel(V_cts)
-        V_rename{i,1}=value_rename{strcmp(V_cts{i},value_rename(:,1)),2};
+    if ischar(value_rename)
+        [~,sortInd]=sort(cell2mat(cellfun(@str2num,V_cts,'UniformOutput',false)));
+        [~,sortInd]=sort(sortInd);
+        for i=1:numel(V_cts)
+            V_rename{i,1}=num2str(sortInd(i));
+        end
+    else
+        for i=1:numel(V_cts)
+            V_rename{i,1}=value_rename{strcmp(V_cts{i},value_rename(:,1)),2};
+        end
     end
 end
 if nargin<3 | isempty(type_rename)

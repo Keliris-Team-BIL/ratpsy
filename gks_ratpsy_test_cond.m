@@ -1,4 +1,4 @@
-filename='/Users/gkeliris/GitHub/ratpsy/Data/Rat_07/3907L-2020-05-15-131520.txt';
+filename='/Users/gkeliris/GitHub/ratpsy/Data/Rat_07/3907L-2020-02-13-144842.txt';
 
 info=gk_pyControl_read(filename);
 trialType={{},{'pW_L'}};

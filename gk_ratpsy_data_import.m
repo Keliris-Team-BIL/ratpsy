@@ -64,7 +64,7 @@ trialNumber=trEnd.trialNum;
                    %'88 | 85.75','6'; '91 | 86.5','7'; '94 | 88','8'; '97 | 91','9'; '100 | 97','10'};
                % '73','1'; '79','2'; '82','3'; '83.5','14'; '84.25','15';...
                % '85.75','16'; '86.5','17'; '88','18'; '91','19'; '97','20'};
-   trialType = gk_pyControl_getCategories(trType);
+trialType = gk_pyControl_getCategories(trType,'autonum');
 pw_L = gk_pyControl_getCategories(trPWL);
 pw_R = gk_pyControl_getCategories(trPWR);
 
