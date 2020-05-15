@@ -1,5 +1,5 @@
 function [valueCateg typeCateg] = gk_pyControl_getCategories(event, value_rename, type_rename, verbose)
-% USAGE: [valueCateg typeCateg] = gk_pyControl_getCategories(event, [value_rename], [type_rename])
+% USAGE: [valueCateg typeCateg] = gk_pyControl_getCategories(event, [value_rename], [type_rename],[verbose])
 %
 % INFO: this function will extract the value and type categories from
 % events and can additionally rename the categories for easy entering in
