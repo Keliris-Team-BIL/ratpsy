@@ -14,11 +14,14 @@ function N = gk_get_psychometric(data, printNumbers)
 if nargin<2
     printNumbers=false;
 end
-N.trialType=categories(data.trialType);
-for i=1:numel(N.trialType)
-    tmp=data.pw_L(data.trialType==N.trialType(i));
+
+V_cts=categories(data.trialType);
+for i=1:numel(V_cts)
+    tmp=data.pw_L(data.trialType==V_cts(i));
     pw_L(1,i)=str2num(char(tmp(1)));
 end
+[pw_L, sortInd]=sort(pw_L);
+N.trialType=V_cts(sortInd);
 %pw_L=[70 73 76 79 82 88 91 94 97 100];
 pw_R=fliplr(pw_L);
 N.stimulus=gk_ratpsy_Michelson(pw_L,pw_R); % Michelson contrast = (Imax-Imin)/(Imax+Imin)
