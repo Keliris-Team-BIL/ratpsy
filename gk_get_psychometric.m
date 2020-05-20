@@ -28,7 +28,7 @@ N.stimulus=gk_ratpsy_Michelson(pw_L,pw_R); % Michelson contrast = (Imax-Imin)/(I
 
 % Get the correct trials
 data_correct=data(data.outcome=='correct',:);
-
+data_completed=data(data.outcome=='correct'| data.outcome=='wrong',1);
 % if no correct trial return an empty matrix
 if isempty(data_correct)
     N=[];
@@ -36,7 +36,7 @@ if isempty(data_correct)
 end
 
 if printNumbers
-    overall_perf=height(data_correct)/height(data);
+    overall_perf=height(data_correct)/height(data_completed);
     fprintf('\nOverall performance excluding aborts = %.2f %%\n',overall_perf*100);
 end
 
@@ -46,7 +46,7 @@ if printNumbers
 end
 for tt=1:numel(N.stimulus)
     %cond{tt}=data(data.trialType==N.trialType(tt),:);
-    
+
     N.correct(tt)=numel(find(data.trialType==N.trialType(tt) & data.outcome=='correct'));
     N.total(tt)=numel(find(data.trialType==N.trialType(tt) & (data.outcome=='correct' | data.outcome=='wrong')));
     N.right(tt)=numel(find(data.trialType==N.trialType(tt) & data.response=='R'));
@@ -60,15 +60,14 @@ end
 if printNumbers
     fprintf('\nPer condition Right\n');
     fprintf('____________________________\n');
-    
+
     for tt=1:numel(N.stimulus)
         fprintf('Stim = %.2f : %d/%d = %.2f %% \n',N.stimulus(tt),N.right(tt),N.total(tt),100*N.right(tt)/N.total(tt));
     end
-    
+
     fprintf('\nPer condition Left\n');
     fprintf('____________________________\n');
     for tt=1:numel(N.stimulus)
         fprintf('Stim = %.2f : %d/%d = %.2f %% \n',N.stimulus(tt),N.left(tt),N.total(tt),100*N.left(tt)/N.total(tt));
     end
 end
-
