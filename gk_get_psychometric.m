@@ -15,7 +15,7 @@ if nargin<2
     printNumbers=false;
 end
 
-V_cts=categories(data.trialType);
+V_cts=categories(removecats(data.trialType));
 for i=1:numel(V_cts)
     tmp=data.pw_L(data.trialType==V_cts(i));
     pw_L(1,i)=str2num(char(tmp(1)));
