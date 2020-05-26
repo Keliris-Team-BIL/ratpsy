@@ -29,9 +29,7 @@ N.stimulus=gk_ratpsy_Michelson(pw_L,pw_R); % Michelson contrast = (Imax-Imin)/(I
 % Get the correct trials
 data_correct=data(data.outcome=='correct',:);
 data_completed=data(data.outcome=='correct'| data.outcome=='wrong',1);
-% exclude the most difficult condition (trialType 6 or 7)
-data_correct_excl67=data(data.outcome=='correct' & data.trialType~=6 & data.trialType~=7,1);
-data_completed_excl67=data((data.outcome=='correct'| data.outcome=='wrong') & data.trialType~=6 & data.trialType~=7,1);
+
 
 % if no correct trial return an empty matrix
 if isempty(data_correct)
@@ -41,9 +39,7 @@ end
 
 if printNumbers
     overall_perf=height(data_correct)/height(data_completed);
-    fprintf('\nOverall performance excluding aborts = %.2f %%\n',overall_perf*100);;
-    overall_perf_excl67=height(data_correct_excl67)/height(data_completed_excl67);
-    fprintf('\nOverall performance excluding aborts and most difficult = %.2f %%\n',overall_perf_excl67*100);;
+    fprintf('\nOverall performance excluding aborts = %.2f %%\n',overall_perf*100);
 end
 
 if printNumbers
