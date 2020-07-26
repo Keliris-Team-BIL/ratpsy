@@ -1,4 +1,4 @@
-function RT = gk_ratpsy_get_reactionTimes(data)
+function RT = gk_ratpsy_get_reactionTimes(data,rat)
 
 d=data.description;
 allDataPre=gk_ratpsy_collapseTimepoints(data,'allPre');
