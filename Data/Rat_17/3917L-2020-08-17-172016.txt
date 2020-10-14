@@ -1,0 +1,96 @@
+I Experiment name  : II_phase5
+I Task name : 6C_II_phase5_Signal discrimination with 6C_experiment
+I Subject ID : 3917L
+I Start date : 2020/08/17 17:20:16
+
+S {'the_wait': 13, 'aborted_fixation': 7, 'right_reward': 11, 'wait_for_init': 1, 'display_stimulus': 4, 'evaluate_rat_type': 5, 'ITI': 12, 'current_trial': 2, 'time_out': 9, 'reward_available': 6, 'init_poke_hold': 3, 'aborted_response': 8, 'left_reward': 10, 'end_session': 14}
+
+E {'center_poke': 15, 'center_poke_out': 16, 'hold_timer': 19, 'left_poke': 18, 'right_poke': 17, 'stimulus_onset': 20, 'session_timer': 21}
+
+
+D 0 1
+P 0 correct:R
+P 1 pW_L:100
+P 2 pW_R:70
+P 2 trialType:6
+V 56026 L_reward_duration 50
+D 1087626 17
+D 1099902 17
+D 1105922 15
+D 1105923 3
+P 1105924 n_trials:1
+D 1106545 16
+D 1106546 7
+P 1106547 n_aborted_fixation:1
+D 1106560 15
+D 1106703 16
+D 1106711 15
+D 1106819 16
+D 1107546 2
+P 1107546 correct:R
+P 1107547 pW_L:100
+P 1107548 pW_R:70
+P 1107548 trialType:6
+D 1111680 15
+D 1111680 3
+P 1111681 n_trials:2
+D 1111745 16
+D 1111746 7
+P 1111747 n_aborted_fixation:2
+D 1111791 15
+D 1112551 16
+D 1112746 2
+P 1112746 correct:R
+P 1112747 pW_L:100
+P 1112748 pW_R:70
+P 1112748 trialType:6
+D 1126995 15
+D 1126995 3
+P 1126996 n_trials:3
+D 1127060 16
+D 1127060 7
+P 1127061 n_aborted_fixation:3
+D 1127091 15
+D 1127290 16
+D 1128061 2
+P 1128061 correct:R
+P 1128062 pW_L:100
+P 1128063 pW_R:70
+P 1128063 trialType:6
+D 1166088 15
+D 1166089 3
+P 1166089 n_trials:4
+D 1166192 16
+D 1166193 7
+P 1166193 n_aborted_fixation:4
+D 1167193 2
+P 1167193 correct:R
+P 1167194 pW_L:100
+P 1167195 pW_R:70
+P 1167195 trialType:6
+D 1195998 18
+D 1204793 15
+D 1204794 3
+P 1204794 n_trials:5
+D 1204822 16
+D 1204823 7
+P 1204823 n_aborted_fixation:5
+D 1204858 15
+D 1205536 16
+D 1205823 2
+P 1205823 correct:R
+P 1205824 pW_L:100
+P 1205825 pW_R:70
+P 1205825 trialType:6
+D 1224808 18
+D 1227095 15
+D 1227096 3
+P 1227096 n_trials:6
+D 1227627 16
+D 1227628 7
+P 1227628 n_aborted_fixation:6
+D 1228628 2
+P 1228628 correct:R
+P 1228629 pW_L:100
+P 1228630 pW_R:70
+P 1228630 trialType:6

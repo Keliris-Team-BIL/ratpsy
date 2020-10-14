@@ -1,27 +1,26 @@
 % be in code directory
-forceRecalc=false;
-data=gk_ratpsy_readData('/Users/gkeliris/GitHub/ratpsy/Data',forceRecalc);
+forceRecalc=true;
+data=gk_ratpsy_readData('C:/Neuroscience/GitHub/ratpsy/Data',forceRecalc);
 
 %% Collapse pre and post data for population analysis
 allDataPre=gk_ratpsy_collapseTimepoints(data,'allPre');
-linPost=gk_ratpsy_collapseTimepoints(data,{'post10','post11','post12'});
-logPost=gk_ratpsy_collapseTimepoints(data,{'post13','post14','post15'});
+B.L=gk_ratpsy_collapseTimepoints(data,{'post21','post22','post23','post24'});
+J60=gk_ratpsy_collapseTimepoints(data,{'post25','post26','post27','post28'});
 
 %% plot the psychometric per rat
-for rat=[7,8,11,19]
+for rat=[19,20]
     display('_____________________________________________');
     fprintf('Processing rat: %d \n',rat);
-    N_pre=gk_get_psychometric(allDataPre(allDataPre.ratNumber==rat,:),1);
-    N_post=gk_get_psychometric(linPost(linPost.ratNumber==rat,:),1);
-    N_postLog=gk_get_psychometric(logPost(logPost.ratNumber==rat,:),1);
+    B.L=gk_get_psychometric(B.L(B.L.ratNumber==rat,:),1);
+    J60=gk_get_psychometric(J60(J60.ratNumber==rat,:),1);
+    
     figure(rat); hold on;
-    display('-------PRE---------');
-    gk_PAL_PFML(N_pre,[1.0, 0.2, 0.2]);
+    display('-------B.L---------');
+    gk_PAL_PFML(B.L,[1.0, 0.2, 0.2]);
     grid on;
-    display('-------POST--------');
-    gk_PAL_PFML(N_post,[0.2, 0.2, 1.0]);
-    display('-------LOG---------');
-    gk_PAL_PFML(N_postLog,[0.2, 1.0, 0.2]);
+    display('-------J60--------');
+    gk_PAL_PFML(J60,[0.2, 0.2, 1.0]);
+    
     title(['Rat ',num2str(rat)]);
-    legend('pre','pre','post','post','postLog','postLog','Location','northwest');
+    legend('B.L','B.L','J60','J60','Location','northwest');
 end

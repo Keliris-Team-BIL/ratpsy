@@ -1,0 +1,94 @@
+I Experiment name  : II_phase5
+I Task name : 6C_II_phase5_Signal discrimination with 6C_experiment
+I Subject ID : 3917L
+I Start date : 2020/08/14 16:09:59
+
+S {'the_wait': 13, 'aborted_fixation': 7, 'right_reward': 11, 'wait_for_init': 1, 'display_stimulus': 4, 'evaluate_rat_type': 5, 'ITI': 12, 'current_trial': 2, 'time_out': 9, 'reward_available': 6, 'init_poke_hold': 3, 'aborted_response': 8, 'left_reward': 10, 'end_session': 14}
+
+E {'center_poke': 15, 'center_poke_out': 16, 'hold_timer': 19, 'left_poke': 18, 'right_poke': 17, 'stimulus_onset': 20, 'session_timer': 21}
+
+
+D 0 1
+P 0 correct:R
+P 1 pW_L:91
+P 2 pW_R:79
+P 2 trialType:9
+D 18432 18
+D 21154 15
+D 21155 3
+P 21155 n_trials:1
+D 21454 16
+D 21454 7
+P 21455 n_aborted_fixation:1
+D 22455 2
+P 22455 correct:R
+P 22456 pW_L:91
+P 22457 pW_R:79
+P 22457 trialType:9
+D 23050 18
+D 23334 18
+D 24544 15
+D 24545 3
+P 24546 n_trials:2
+D 24834 16
+D 24834 7
+P 24835 n_aborted_fixation:2
+D 24873 15
+D 25069 16
+D 25835 2
+P 25835 correct:R
+P 25836 pW_L:91
+P 25837 pW_R:79
+P 25837 trialType:9
+D 26306 18
+D 26922 18
+D 29494 15
+D 29495 3
+P 29496 n_trials:3
+D 29877 16
+D 29878 7
+P 29879 n_aborted_fixation:3
+D 30878 2
+P 30878 correct:R
+P 30879 pW_L:91
+P 30880 pW_R:79
+P 30880 trialType:9
+D 47364 18
+D 55574 15
+D 55575 3
+P 55575 n_trials:4
+D 55938 16
+D 55939 7
+P 55939 n_aborted_fixation:4
+D 56939 2
+P 56939 correct:R
+P 56940 pW_L:91
+P 56941 pW_R:79
+P 56941 trialType:9
+D 58609 15
+D 58609 3
+P 58610 n_trials:5
+D 58696 16
+D 58696 7
+P 58697 n_aborted_fixation:5
+D 58792 15
+D 59307 16
+D 59697 2
+P 59697 correct:R
+P 59698 pW_L:91
+P 59699 pW_R:79
+P 59699 trialType:9
+D 60090 15
+D 60090 3
+P 60091 n_trials:6
+D 60223 16
+D 60224 7
+P 60225 n_aborted_fixation:6
+D 61224 2
+P 61224 correct:R
+P 61225 pW_L:91
+P 61226 pW_R:79
+P 61226 trialType:9
+D 1075779 18
+D 1077253 18
+D 1086514 18

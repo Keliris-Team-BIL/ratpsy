@@ -1,0 +1,115 @@
+I Experiment name  : II_phase5
+I Task name : 6C_II_phase5_Signal discrimination with 6C_experiment
+I Subject ID : 3917L
+I Start date : 2020/05/25 11:46:41
+
+S {'the_wait': 13, 'aborted_fixation': 7, 'right_reward': 11, 'wait_for_init': 1, 'display_stimulus': 4, 'evaluate_rat_type': 5, 'ITI': 12, 'current_trial': 2, 'time_out': 9, 'reward_available': 6, 'init_poke_hold': 3, 'aborted_response': 8, 'left_reward': 10, 'end_session': 14}
+
+E {'center_poke': 15, 'center_poke_out': 16, 'hold_timer': 19, 'left_poke': 18, 'right_poke': 17, 'stimulus_onset': 20, 'session_timer': 21}
+
+
+D 0 1
+P 0 correct:R
+P 1 pW_L:97
+P 2 pW_R:73
+P 2 trialType:7
+D 208852 15
+D 208852 3
+P 208853 n_trials:1
+D 208900 16
+D 208901 7
+P 208902 n_aborted_fixation:1
+D 209901 2
+P 209901 correct:R
+P 209902 pW_L:97
+P 209903 pW_R:73
+P 209903 trialType:7
+D 372947 17
+D 755788 18
+D 756246 18
+D 769531 18
+D 782575 18
+D 783421 18
+D 793841 18
+D 798378 17
+D 1020997 18
+D 1032072 18
+D 1033835 18
+D 1081718 15
+D 1081718 3
+P 1081719 n_trials:2
+D 1082719 19
+P 1082719 hold_time:1000
+P 1082720 n_successful_fixation:1
+D 1082720 4
+D 1082721 5
+D 1084046 16
+D 1084047 6
+D 1090608 15
+D 1091047 8
+P 1091048 n_aborted_response:1
+D 1091049 2
+P 1091049 correct:R
+P 1091050 pW_L:97
+P 1091051 pW_R:73
+P 1091051 trialType:7
+D 1091524 16
+D 1092013 15
+D 1092014 3
+P 1092014 n_trials:3
+D 1092425 16
+D 1092426 7
+P 1092427 n_aborted_fixation:2
+D 1093426 2
+P 1093426 correct:R
+P 1093427 pW_L:97
+P 1093428 pW_R:73
+P 1093428 trialType:7
+D 1095987 15
+D 1095987 3
+P 1095988 n_trials:4
+D 1096987 19
+P 1096987 hold_time:1000
+P 1096988 n_successful_fixation:2
+D 1096988 4
+D 1096989 5
+D 1097992 16
+D 1097993 6
+D 1099029 17
+P 1099030 n_correct_right:1
+D 1099031 11
+P 1099032 n_R_rewards:1
+D 1099071 12
+D 1102071 1
+P 1102071 correct:R
+P 1102072 pW_L:91
+P 1102073 pW_R:79
+P 1102073 trialType:9
+D 1103311 15
+D 1103312 3
+P 1103313 n_trials:5
+D 1104312 19
+P 1104312 hold_time:1000
+P 1104313 n_successful_fixation:3
+D 1104313 4
+D 1104314 5
+D 1104973 16
+D 1104974 6
+D 1105756 17
+P 1105757 n_correct_right:2
+D 1105758 11
+P 1105759 n_R_rewards:2
+D 1105798 12
+D 1108798 1
+P 1108798 correct:L
+P 1108799 pW_L:79
+P 1108800 pW_R:91
+P 1108800 trialType:3
+D 1123957 17
+D 1124152 17
+D 1318770 17
+D 1318897 17
+D 1501816 17
+D 2938554 18
+D 2969764 17
+D 3487087 18
